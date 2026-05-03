@@ -1,306 +1,2631 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubra como destravar seus planos e superar bloqueios mentais que impedem suas conquistas. Conheça o curso Destravador de Sonhos.">
-    <title>Destravador de Sonhos - Supere Bloqueios Mentais e Realize Seus Planos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<title>Protocolo de Retorno — 7 dias para ele voltar a te procurar</title>
+<meta name="description" content="Um método de 7 dias criado para fazer ele voltar a te procurar — sem humilhação, sem suplicar, sem errar.">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rose:       #DC2626;
+  --rose-d:     #991B1B;
+  --rose-l:     #EF4444;
+  --rose-soft:  #FEF2F2;
+  --rose-pale:  #FFF5F5;
+  --rose-mid:   #FECACA;
+  --gold:       #F59E0B;
+  --gold-d:     #D97706;
+  --gold-l:     #FCD34D;
+  --gold-soft:  #FFFBEB;
+  --gold-pale:  #FEF3C7;
+  --white:      #ffffff;
+  --off-white:  #FFFBF7;
+  --ink:        #0F0F0F;
+  --ink2:       #2D2D2D;
+  --ink3:       #525252;
+  --ink4:       #8A8A8A;
+  --border:     #FED7D7;
+  --border-d:   #FEB2B2;
+}
+
+*,:before,:after { box-sizing:border-box; margin:0; padding:0; }
+em, i { font-style: normal; }
+
+body { font-weight: 500; }
+p, li, span, div { font-weight: 500; }
+strong, b { font-weight: 800; }
+
+.ident-txt, .psico-text p, .historia-text p, .ajuda-text > p,
+.carta-quote p, .garantia-text p, .faq-a-inner,
+.oferta-product-sub, .psico-highlight p, .desbloqueio-intro,
+.hero-sub, .cta-final-content > p, .ident-intro {
+  font-size: clamp(1.35rem, 4.2vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.modal-form label { font-size: 1.15rem; font-weight: 700; }
+.modal-form input, .modal-form select { font-size: 1.25rem; font-weight: 500; }
+.modal p { font-size: 1.25rem; font-weight: 500; }
+.pix-instr { font-size: 1.1rem; font-weight: 500; }
+.pix-copy-val { font-size: 1.05rem; font-weight: 600; }
+.pix-desc { font-size: 1.15rem; font-weight: 500; }
+.pix-note { font-size: 1.08rem; font-weight: 500; }
+.success-detail-row { font-size: 1.15rem; font-weight: 500; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body {
+  background: var(--off-white);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+@media (max-width:720px){ body { font-size: 23px; } }
+@media (max-width:480px){ body { font-size: 22px; } }
+
+img { max-width:100%; display:block; }
+a { color:inherit; text-decoration:none; }
+
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background: var(--rose-pale); }
+::-webkit-scrollbar-thumb { background: var(--rose-l); border-radius:2px; }
+::selection { background: var(--rose-mid); color: var(--ink); }
+
+.container    { width:92%; max-width:1000px; margin:0 auto; }
+.container-sm { width:92%; max-width:700px;  margin:0 auto; }
+.container-xs { width:92%; max-width:560px;  margin:0 auto; }
+
+/* ─── LANDING SCREEN — HOOK INTEGRADO ─── */
+.landing {
+  position: fixed; inset:0; z-index:100;
+  background: linear-gradient(160deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+  display: flex; justify-content:center; align-items:center;
+  padding: 40px 20px;
+  overflow-y: auto;
+  transition: opacity .5s;
+}
+.landing.hidden { opacity:0; pointer-events:none; }
+
+/* Subtle grain overlay */
+.landing::before {
+  content:'';
+  position:absolute; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:0;
+}
+
+.landing-inner {
+  width:100%; max-width:580px;
+  text-align:center;
+  position: relative; z-index:1;
+}
+
+/* Avatar */
+.landing-avatar {
+  width:80px; height:80px;
+  border-radius:50%;
+  margin:0 auto 28px;
+  overflow:hidden;
+  border:2px solid rgba(240,138,176,.4);
+  box-shadow: 0 0 0 6px rgba(224,92,138,.08);
+}
+.landing-avatar img { width:100%; height:100%; object-fit:cover; }
+
+/* Hook headline — the TikTok message */
+.hook-eyebrow {
+  display:inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rose-l);
+  opacity: .7;
+  margin-bottom: 20px;
+}
+
+.hook-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6.5vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  letter-spacing: -.02em;
+}
+.hook-headline .rose { color: var(--rose-l); }
+
+/* The insight line — reframe */
+.hook-insight {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(220,38,38,.2);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 0 auto 28px;
+  max-width: 480px;
+}
+.hook-insight p {
+  color: rgba(255,255,255,.75);
+  font-size: clamp(.95rem, 2.6vw, 1.05rem);
+  line-height: 1.7;
+  font-weight: 500;
+}
+.hook-insight strong {
+  color: #fff;
+  font-weight: 700;
+}
+.hook-insight .highlight {
+  display: block;
+  margin-top: 10px;
+  color: var(--rose-l);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 2.8vw, 1.15rem);
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* CTA buttons */
+.hook-cta-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 14px;
+}
+
+.l-choices { display:flex; flex-direction:column; gap:12px; max-width:480px; margin:0 auto; }
+
+.l-btn {
+  display:flex; align-items:center; gap:14px;
+  padding: 18px 22px;
+  border: 1.5px solid rgba(220,38,38,.25);
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  cursor:pointer; text-align:left;
+  transition: border-color .2s, box-shadow .2s, background .2s, transform .15s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position:relative; overflow:hidden;
+  width:100%;
+  backdrop-filter: blur(8px);
+}
+.l-btn:hover {
+  border-color: rgba(220,38,38,.6);
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 8px 32px rgba(220,38,38,.2);
+  transform: translateY(-1px);
+}
+.l-btn:active { transform: scale(.98); }
+
+.l-btn-primary {
+  border-color: rgba(220,38,38,.5);
+  background: rgba(220,38,38,.1);
+}
+.l-btn-primary:hover { border-color: #EF4444; }
+
+.l-btn-icon {
+  width:44px; height:44px; flex-shrink:0;
+  background: rgba(220,38,38,.15);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.2rem;
+  border: 1px solid rgba(220,38,38,.2);
+}
+
+.l-btn-text { flex:1; display:flex; flex-direction:column; gap:2px; }
+.l-btn-main-txt {
+  color: #fff;
+  font-size: clamp(1rem, 2.8vw, 1.1rem);
+  font-weight: 700;
+}
+.l-btn-sub-txt {
+  color: rgba(255,255,255,.45);
+  font-size: .82rem;
+  font-weight: 500;
+}
+.l-btn-arrow {
+  color: var(--rose-l);
+  font-size: 1.2rem;
+  flex-shrink:0;
+  opacity: .7;
+  transition: transform .2s, opacity .2s;
+}
+.l-btn:hover .l-btn-arrow { transform: translateX(4px); opacity:1; }
+
+.l-trust {
+  display:flex; align-items:center; justify-content:center;
+  flex-wrap:wrap; gap:12px;
+  margin-top:28px;
+  padding:12px 16px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  background: rgba(255,255,255,.03);
+}
+.l-trust-item {
+  display:flex; align-items:center; gap:6px;
+  font-size:.75rem; font-weight:500;
+  color: rgba(255,255,255,.4);
+}
+.l-trust-sep { width:1px; height:12px; background:rgba(255,255,255,.12); }
+
+/* ─── MAIN SITE ─── */
+.site { opacity:1; pointer-events:auto; transition: opacity .5s; }
+.site.revealed { opacity:1; pointer-events:auto; }
+
+.section-divider {
+  width:100%; height:1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.section-label {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size: 1.05rem; font-weight:800;
+  letter-spacing:.18em; text-transform:uppercase;
+  color: var(--rose-d);
+  margin-bottom:18px;
+}
+.section-label-line { width:24px; height:2px; background:var(--rose); border-radius:2px; }
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 7.5vw, 3.9rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.12;
+  margin-bottom:22px;
+  letter-spacing:-.02em;
+}
+.section-title .rose { color: var(--rose); }
+
+/* ─── HERO — continua o gancho ─── */
+.hero {
+  background: linear-gradient(160deg, var(--white) 0%, var(--rose-pale) 50%, var(--rose-soft) 100%);
+  padding: 90px 0 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:4px;
+  background: linear-gradient(90deg, #991B1B, #DC2626, #EF4444);
+}
+
+/* Bridge line — top of hero continues the TikTok hook */
+.hero-bridge {
+  background: #0F172A;
+  color: #fff;
+  padding: 14px 20px;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(.82rem, 2.2vw, .92rem);
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+.hero-bridge .rose-txt { color: var(--rose-l); }
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:56px;
+  align-items:center;
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+}
+@media(max-width:860px){
+  .hero-grid { grid-template-columns:1fr; gap:36px; text-align:center; }
+}
+
+.hero-content { z-index:2; position:relative; }
+
+.hero-pre {
+  display:inline-flex; align-items:center; gap:12px;
+  font-size:.82rem; font-weight:800;
+  letter-spacing:.18em; text-transform:uppercase;
+  color: var(--rose-d);
+  margin-bottom:24px;
+}
+.hero-pre-line { width:28px; height:2px; background:var(--rose); border-radius:2px; }
+
+/* New hook-mirroring hero headline */
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.9rem, 8.5vw, 4.6rem);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.06;
+  margin-bottom: 22px;
+  letter-spacing:-.025em;
+}
+.hero-h1 .accent { color: var(--rose); display:block; }
+
+.hero-sub {
+  color: var(--ink2);
+  font-size: clamp(1.35rem, 4vw, 1.55rem);
+  line-height: 1.6;
+  margin-bottom:28px;
+  font-weight:500;
+}
+.hero-sub strong { color: var(--ink); font-weight:700; }
+
+/* Silence insight box — mirrors TikTok reframe right in the hero */
+.hero-insight-box {
+  background: var(--rose-pale);
+  border: 1.5px solid var(--rose-mid);
+  border-left: 4px solid #DC2626;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+.hero-insight-box p {
+  color: var(--ink2);
+  font-size: clamp(1.2rem, 3.6vw, 1.4rem);
+  line-height: 1.65;
+  font-weight: 500;
+}
+.hero-insight-box strong { color: var(--rose-d); font-weight: 700; }
+@media(max-width:860px){ .hero-insight-box { text-align:left; } }
+
+.hero-cta-row {
+  display:flex; flex-wrap:wrap; gap:12px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:24px;
+}
+@media(max-width:860px){ .hero-cta-row { justify-content:center; } }
+
+.btn-primary {
+  display:inline-flex; align-items:center; gap:10px;
+  padding: 22px 36px;
+  background: linear-gradient(135deg, #B91C1C, #DC2626);
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; font-size: 1.25rem;
+  letter-spacing:.01em;
+  border:none; border-radius:14px;
+  cursor:pointer;
+  transition: transform .15s, box-shadow .2s;
+  box-shadow: 0 8px 24px rgba(220,38,38,.32);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(220,38,38,.42); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 22px 28px;
+  background: var(--white);
+  color: #DC2626;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700; font-size: 1.2rem;
+  border: 1.5px solid #FECACA;
+  border-radius:14px;
+  cursor:pointer;
+  transition: background .2s, border-color .2s;
+}
+.btn-secondary:hover { background:#FEF2F2; border-color:#DC2626; }
+
+.hero-trust {
+  display:flex; align-items:center;
+  flex-wrap:wrap; gap:14px;
+  padding:12px 16px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--white);
+  max-width:440px;
+}
+@media(max-width:860px){ .hero-trust { margin: 0 auto; } }
+.htrust-item {
+  display:flex; align-items:center; gap:6px;
+  color:var(--ink3); font-size: 1.02rem; font-weight:500;
+}
+.htrust-sep { width:1px; height:14px; background:var(--border); }
+
+.hero-photo-wrap {
+  position:relative;
+  max-width:430px;
+  margin: 0 auto;
+}
+.hero-photo {
+  position:relative;
+  border-radius: 28px;
+  overflow:hidden;
+  box-shadow: 0 24px 70px rgba(220,38,38,.18), 0 4px 12px rgba(0,0,0,.06);
+  border: 6px solid var(--white);
+  aspect-ratio: 3/4;
+}
+.hero-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.hero-photo:before {
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 60%, rgba(192,64,112,.12));
+  z-index:2; pointer-events:none;
+}
+
+.hero-badge {
+  position:absolute;
+  bottom: -22px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border: 1.5px solid var(--rose-mid);
+  border-radius: 999px;
+  padding: 12px 22px;
+  display:flex; align-items:center; gap:10px;
+  box-shadow: 0 10px 32px rgba(220,38,38,.18);
+  white-space:nowrap;
+  z-index:5;
+}
+.hero-badge-dot {
+  width:8px; height:8px; border-radius:50%;
+  background: #DC2626;
+  box-shadow: 0 0 0 4px rgba(220,38,38,.15);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 4px rgba(220,38,38,.15); }
+  50%     { box-shadow: 0 0 0 8px rgba(220,38,38,.05); }
+}
+.hero-badge-txt {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem; font-weight:700;
+  color:var(--ink);
+}
+
+/* ─── CARTA PESSOAL ─── */
+.carta-section {
+  background: var(--white);
+  padding: 70px 0 60px;
+}
+
+.carta-quote {
+  background: var(--rose-pale);
+  border: 1.5px solid var(--rose-mid);
+  border-radius:24px;
+  max-width:720px;
+  margin: 0 auto;
+  padding: 44px 48px;
+  position:relative;
+  font-family: 'Playfair Display', serif;
+}
+@media(max-width:720px){ .carta-quote { padding: 32px 24px; border-radius:18px; } }
+
+.carta-quote:before {
+  content:'"';
+  font-family: 'Playfair Display', serif;
+  font-size:6rem; font-weight:700;
+  color: var(--rose-l);
+  position:absolute;
+  top:-10px; left:24px;
+  line-height:1;
+  opacity:.5;
+}
+
+.carta-quote p {
+  color: var(--ink2);
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  line-height:1.75;
+  font-style:normal;
+  font-weight:500;
+}
+.carta-quote p + p { margin-top:14px; }
+.carta-quote strong { color: var(--rose-d); font-weight:700; font-style:normal; }
+
+.carta-sign {
+  display:flex; align-items:center; gap:14px;
+  margin-top:28px;
+  padding-top:24px;
+  border-top: 1px solid var(--border);
+}
+.carta-sign-avatar {
+  width:54px; height:54px; border-radius:50%;
+  overflow:hidden;
+  border:2px solid var(--white);
+  box-shadow: 0 4px 14px rgba(220,38,38,.15);
+  flex-shrink:0;
+}
+.carta-sign-avatar img { width:100%; height:100%; object-fit:cover; }
+.carta-sign-info { font-family: 'DM Sans', sans-serif; font-style:normal; }
+.carta-sign-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight:700; color: var(--ink); }
+.carta-sign-role { font-size: 1.05rem; color: var(--ink3); font-weight:500; }
+
+/* ─── IDENTIFICAÇÃO ─── */
+.ident-section {
+  background: var(--off-white);
+  padding: 70px 0 60px;
+}
+
+.ident-intro {
+  color: var(--ink2);
+  font-size: clamp(1.05rem, 2.8vw, 1.25rem);
+  line-height:1.7;
+  max-width:620px;
+  margin-bottom:48px;
+}
+.ident-intro strong { color: var(--ink); font-weight:700; }
+
+.ident-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:48px;
+}
+@media(max-width:560px){ .ident-grid { grid-template-columns:1fr; } }
+
+.ident-item {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius:20px;
+  padding:24px;
+  display:flex; align-items:flex-start; gap:16px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.ident-item:hover {
+  border-color: #EF4444;
+  box-shadow: 0 8px 28px rgba(220,38,38,.08);
+}
+
+.ident-ico { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+.ident-txt {
+  color: var(--ink2);
+  font-size: clamp(.95rem, 2.6vw, 1.05rem);
+  line-height:1.6;
+}
+.ident-txt strong { color:var(--ink); font-weight:700; }
+
+.ident-reveal {
+  background: linear-gradient(135deg, var(--rose-pale), var(--white));
+  border: 1.5px solid var(--rose-mid);
+  border-radius:20px;
+  padding:34px 36px;
+  text-align:center;
+}
+.ident-reveal p {
+  color:var(--ink2);
+  font-size: clamp(1.05rem, 2.8vw, 1.2rem);
+  line-height:1.65;
+}
+.ident-reveal strong { color:var(--rose-d); font-weight:700; }
+
+/* ─── MINHA HISTÓRIA ─── */
+.historia-section {
+  background: var(--white);
+  padding: 70px 0;
+}
+
+.historia-grid {
+  display:grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap:60px;
+  align-items:center;
+}
+@media(max-width:860px){
+  .historia-grid { grid-template-columns:1fr; gap:40px; }
+}
+
+.historia-photo-wrap { position:relative; }
+.historia-photo {
+  position:relative;
+  border-radius: 24px;
+  overflow:hidden;
+  box-shadow: 0 20px 60px rgba(220,38,38,.15), 0 4px 12px rgba(0,0,0,.05);
+  aspect-ratio: 3/4;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.historia-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.historia-photo-tag {
+  position:absolute;
+  bottom:18px; left:18px; right:18px;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-family: 'Playfair Display', serif;
+  font-style:normal;
+  font-size: .95rem;
+  color: var(--ink2);
+  border: 1px solid rgba(240,200,216,.6);
+}
+
+.historia-text p {
+  color: var(--ink2);
+  font-size: clamp(1rem, 2.7vw, 1.1rem);
+  line-height:1.8;
+}
+.historia-text p + p { margin-top:16px; }
+.historia-text strong { color: var(--ink); font-weight:700; }
+.historia-text em { color: var(--rose-d); font-style:normal; font-weight:500; }
+
+/* ─── PSICOLOGIA ─── */
+.psico-section {
+  background: var(--off-white);
+  padding: 70px 0;
+}
+
+.psico-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+@media(max-width:700px){ .psico-grid { grid-template-columns:1fr; gap:40px; } }
+
+.psico-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.3rem, 6.8vw, 3.3rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom:22px;
+  letter-spacing:-.02em;
+}
+.psico-h2 .rose { color: var(--rose); }
+
+.psico-text p { color: var(--ink2); line-height:1.8; }
+.psico-text p + p { margin-top:14px; }
+.psico-text strong { color: var(--ink); font-weight:700; }
+
+.psico-highlight {
+  background: var(--rose-pale);
+  border: 1.5px solid var(--rose-mid);
+  border-left: 4px solid #DC2626;
+  border-radius:14px;
+  padding:20px 22px;
+  margin-top:18px;
+}
+.psico-highlight p {
+  color: var(--ink2);
+  font-size: clamp(1.25rem, 3.6vw, 1.45rem) !important;
+  line-height:1.65 !important;
+}
+.psico-highlight strong { color: var(--rose-d); font-weight:800; }
+
+.psico-card-stack { display:flex; flex-direction:column; gap:14px; }
+
+.psico-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius:16px;
+  padding:20px 22px;
+  display:flex; gap:16px; align-items:flex-start;
+  transition: border-color .2s, box-shadow .2s;
+}
+.psico-card:hover { border-color: #EF4444; box-shadow: 0 6px 20px rgba(220,38,38,.08); }
+
+.psico-card-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight:700;
+  color: var(--rose-l);
+  line-height:1; flex-shrink:0;
+  width:38px;
+}
+.psico-card-body strong {
+  display:block; font-size: 1.2rem; font-weight:700;
+  color: var(--ink); margin-bottom:6px;
+}
+.psico-card-body span { font-size: 1.1rem; color:var(--ink3); line-height:1.55; }
+
+/* ─── COMO VOU TE AJUDAR ─── */
+.ajuda-section {
+  background: var(--white);
+  padding: 70px 0;
+}
+
+.ajuda-grid {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+}
+@media(max-width:860px){ .ajuda-grid { grid-template-columns:1fr; gap:40px; } }
+
+.ajuda-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 6.8vw, 3.5rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom:22px;
+  letter-spacing: -.02em;
+}
+.ajuda-text h2 .rose { color: var(--rose); }
+
+.ajuda-list {
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:16px;
+  margin-top:28px;
+}
+.ajuda-list li {
+  position:relative;
+  min-height:100%;
+  padding:18px 18px 18px 56px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:linear-gradient(180deg, #fff7fa 0%, #ffffff 100%);
+  box-shadow:0 14px 34px rgba(220,38,38,.08);
+  color: var(--ink2);
+  font-size: clamp(.95rem, 2.5vw, 1.05rem);
+  line-height:1.65;
+}
+.ajuda-list li::before {
+  content:'✓';
+  position:absolute;
+  left:18px;
+  top:18px;
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg, #DC2626, #991B1B);
+  color:#fff;
+  font-weight:800;
+  box-shadow:0 8px 18px rgba(220,38,38,.22);
+}
+.ajuda-list li strong { color: var(--ink); font-weight:700; }
+@media(max-width:720px){
+  .ajuda-list { grid-template-columns:1fr; }
+}
+
+.ajuda-photo-col { display:flex; justify-content:center; }
+.ajuda-photo-wrap { position:relative; }
+.ajuda-photo-deco {
+  position:absolute;
+  top:-18px; right:-18px;
+  width:100%; height:100%;
+  border-radius:24px;
+  border:2px solid var(--rose-mid);
+  z-index:0;
+}
+.ajuda-photo {
+  position:relative; z-index:1;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow: 0 20px 56px rgba(220,38,38,.15);
+  aspect-ratio: 3/4;
+  max-width:360px;
+}
+.ajuda-photo img { width:100%; height:100%; object-fit:cover; }
+
+/* ─── SOLUÇÃO 7 DIAS ─── */
+.solucao-section {
+  background: linear-gradient(160deg, #0F172A 0%, #1E293B 100%);
+  padding: 70px 0;
+}
+
+.sol-header {
+  text-align:center;
+  margin-bottom:52px;
+}
+.sol-header .section-label { color: var(--rose-l); justify-content:center; }
+.sol-header .section-title { color: var(--white); }
+.sol-header .section-title .rose { color: var(--rose-l); }
+.sol-header > p { color: rgba(255,255,255,.55); font-size: clamp(.95rem, 2.5vw, 1.05rem); }
+
+.pillars {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+@media(max-width:700px){ .pillars { grid-template-columns:1fr; } }
+
+.pillar {
+  background: rgba(255,255,255,.04);
+  border: 1.5px solid rgba(255,255,255,.1);
+  border-radius:20px;
+  padding:30px 26px;
+  transition: border-color .2s, background .2s;
+}
+.pillar:hover { border-color: rgba(240,138,176,.4); background: rgba(255,255,255,.07); }
+
+.pillar-day {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .75rem; font-weight:800;
+  letter-spacing:.18em; text-transform:uppercase;
+  color: var(--rose-l);
+  margin-bottom:12px;
+}
+.pillar-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 4.4vw, 2.1rem);
+  font-weight:700;
+  color: var(--white);
+  margin-bottom:14px;
+}
+.pillar-desc {
+  color: rgba(255,255,255,.7);
+  font-size: clamp(1.18rem, 3.4vw, 1.35rem);
+  line-height:1.7;
+}
+.pillar-desc strong { color: rgba(255,255,255,.85); font-weight:700; }
+
+/* ─── OFERTA ─── */
+.oferta-section {
+  background: var(--off-white);
+  padding: 70px 0;
+}
+
+.oferta-box {
+  background: var(--white);
+  border: 2px solid var(--rose-mid);
+  border-radius:28px;
+  max-width:560px;
+  margin:0 auto;
+  padding: 52px 48px;
+  text-align:center;
+  box-shadow: 0 24px 80px rgba(220,38,38,.14);
+}
+@media(max-width:620px){ .oferta-box { padding:36px 24px; border-radius:20px; } }
+
+.oferta-box-pre {
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  font-size:.75rem; font-weight:800;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--rose-d);
+  margin-bottom:18px;
+}
+
+.oferta-product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 6vw, 2.8rem);
+  font-weight:700;
+  color: var(--ink);
+  margin-bottom:12px;
+}
+.oferta-product-sub {
+  color: var(--ink3);
+  font-size: clamp(1.2rem, 3.6vw, 1.4rem) !important;
+  line-height:1.6 !important;
+  margin-bottom:28px;
+}
+
+.oferta-price-old {
+  font-size: 1.05rem; font-weight:600;
+  color: var(--ink4);
+  text-decoration:line-through;
+  margin-bottom:4px;
+}
+.oferta-price-now {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 9vw, 4.4rem);
+  font-weight:800;
+  color: var(--gold-d);
+  line-height:1;
+  margin-bottom:8px;
+}
+.oferta-price-now small { font-size:.4em; vertical-align:top; font-weight:600; color:var(--gold-d); }
+.oferta-price-info {
+  font-size: 1.08rem; font-weight:500;
+  color: var(--ink4);
+  margin-bottom:24px;
+}
+
+.ancora-emocional {
+  background: var(--gold-soft);
+  border: 1.5px solid var(--gold-pale);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin: 14px 0 22px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.ancora-emocional-icon { font-size: 1.7rem; flex-shrink:0; margin-top:2px; }
+.ancora-emocional p {
+  color: var(--ink2);
+  font-size: 1.15rem !important;
+  line-height: 1.6 !important;
+  margin: 0;
+  font-weight: 500;
+}
+.ancora-emocional p strong { color: var(--gold-d); font-weight: 800; }
+
+.vagas-oferta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #FEF2F2;
+  border: 1.5px solid #FECACA;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.vagas-oferta-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #DC2626;
+}
+.vagas-oferta-dot {
+  width:8px; height:8px; border-radius:50%;
+  background: #DC2626;
+  animation: pulse 1.5s infinite;
+  flex-shrink:0;
+}
+.vagas-countdown-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+.vagas-countdown-bar {
+  flex: 1;
+  height: 8px;
+  background: #FECACA;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.vagas-countdown-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #DC2626, #EF4444);
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+.vagas-countdown-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #DC2626;
+  min-width: 28px;
+  text-align: center;
+}
+.vagas-countdown-label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: #991B1B;
+  text-align: center;
+  margin-top: 2px;
+}
+.vagas-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+.vagas-timer-block {
+  background: #DC2626;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .85rem;
+  font-weight: 800;
+  min-width: 32px;
+  text-align: center;
+}
+.vagas-timer-sep {
+  font-size: .85rem;
+  font-weight: 800;
+  color: #DC2626;
+}
+.vagas-timer-label {
+  font-size: .72rem;
+  font-weight: 500;
+  color: #991B1B;
+  margin-top: 2px;
+}
+
+.oferta-includes {
+  display:flex; flex-direction:column; gap:10px;
+  margin-bottom:28px;
+  text-align:left;
+}
+.oferta-includes-item {
+  display:flex; align-items:flex-start; gap:12px;
+  font-size: clamp(1.15rem, 3.4vw, 1.3rem);
+  color: var(--ink2);
+  line-height:1.55;
+}
+.oferta-includes-item::before { content:'✓'; color:#DC2626; font-weight:800; flex-shrink:0; }
+
+.oferta-cta {
+  display:block; width:100%;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, #B91C1C, #DC2626);
+  color: #FFFFFF;
+  border:none; border-radius:14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800; font-size: clamp(1.25rem, 3.8vw, 1.45rem);
+  cursor:pointer;
+  transition: transform .15s, box-shadow .2s;
+  box-shadow: 0 10px 30px rgba(220,38,38,.36);
+  margin-bottom:16px;
+}
+.oferta-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(220,38,38,.46); }
+
+.oferta-secure {
+  display:flex; align-items:center; justify-content:center;
+  flex-wrap:wrap; gap:14px;
+  font-size:.75rem; font-weight:600;
+  color: var(--ink4);
+}
+
+/* WhatsApp doubt button */
+.oferta-whatsapp-doubt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: transparent;
+  border: 1.5px dashed var(--border-d);
+  border-radius: 12px;
+  color: var(--ink4);
+  font-size: .88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .25s;
+  text-decoration: none;
+  width: 100%;
+}
+.oferta-whatsapp-doubt:hover {
+  border-color: #25d366;
+  color: #16a34a;
+  background: rgba(37,211,102,.04);
+}
+.oferta-whatsapp-doubt svg {
+  width: 18px;
+  height: 18px;
+  fill: #25d366;
+  flex-shrink: 0;
+}
+.oferta-whatsapp-doubt span {
+  line-height: 1.3;
+}
+
+/* ─── DESBLOQUEIO ─── */
+.desbloqueio-section {
+  background: linear-gradient(160deg, #0F172A 0%, #1E293B 100%);
+  padding: 60px 0;
+}
+
+.desbloqueio-box {
+  max-width:600px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.desbloqueio-tag {
+  display:inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size:.72rem; font-weight:800;
+  letter-spacing:.2em; text-transform:uppercase;
+  color: var(--rose-l);
+  background: rgba(220,38,38,.15);
+  border:1px solid rgba(240,138,176,.2);
+  border-radius:999px;
+  padding:6px 16px;
+  margin-bottom:20px;
+}
+
+.desbloqueio-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 7vw, 3.5rem);
+  font-weight:700;
+  color: var(--white);
+  margin-bottom:20px;
+  line-height:1.12;
+}
+.desbloqueio-h2 .rose { color: var(--rose-l); }
+
+.desbloqueio-intro {
+  color: rgba(255,255,255,.75) !important;
+  font-size: clamp(1.25rem, 3.6vw, 1.45rem) !important;
+  line-height:1.7 !important;
+  margin-bottom:28px;
+}
+.desbloqueio-intro strong { color: rgba(255,255,255,.85); font-weight:700; }
+
+.desbloqueio-list {
+  list-style:none;
+  display:flex; flex-direction:column; gap:10px;
+  margin-bottom:28px;
+  text-align:left;
+  max-width:420px;
+  margin-left:auto; margin-right:auto;
+}
+.desbloqueio-list li {
+  display:flex; align-items:flex-start; gap:12px;
+  color:rgba(255,255,255,.6);
+  font-size: clamp(.88rem, 2.3vw, .95rem);
+  line-height:1.5;
+}
+.desbloqueio-list li::before { content:'→'; color:#EF4444; font-weight:800; flex-shrink:0; }
+
+.desbloqueio-pricing {
+  display:flex; align-items:baseline; justify-content:center; gap:14px;
+  margin-bottom:24px;
+}
+.desbloqueio-old {
+  font-size:.85rem; font-weight:600;
+  color:rgba(255,255,255,.35);
+  text-decoration:line-through;
+}
+.desbloqueio-now {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.4rem, 7vw, 3.2rem);
+  font-weight:800;
+  color:var(--gold-l);
+  line-height:1;
+}
+.desbloqueio-now small { font-size:.42em; font-weight:600; vertical-align:top; }
+
+.desbloqueio-cta {
+  display:inline-flex; align-items:center; gap:10px;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #B91C1C, #DC2626);
+  color: #FFFFFF;
+  border:none; border-radius:14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800; font-size: 1rem;
+  cursor:pointer;
+  transition: transform .15s, background .2s;
+  box-shadow: 0 10px 28px rgba(220,38,38,.3);
+}
+.desbloqueio-cta:hover { transform:translateY(-2px); background:#DC2626; }
+
+/* ─── GARANTIA ─── */
+.garantia-section {
+  background: var(--white);
+  padding: 70px 0;
+}
+
+.garantia-grid {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+@media(max-width:860px){ .garantia-grid { grid-template-columns:1fr; gap:40px; } }
+
+.garantia-photo-wrap { display:flex; justify-content:center; }
+.garantia-photo {
+  position:relative;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow: 0 20px 56px rgba(220,38,38,.12);
+  max-width:320px;
+  aspect-ratio:1/1;
+}
+.garantia-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.garantia-shield {
+  position:absolute; bottom:16px; right:16px;
+  background:var(--white);
+  border-radius:50%;
+  width:56px; height:56px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem;
+  box-shadow:0 6px 20px rgba(0,0,0,.1);
+}
+
+.garantia-text h2 {
+  font-family:'Playfair Display',serif;
+  font-size: clamp(2.4rem, 6.8vw, 3.5rem);
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.15;
+  margin-bottom:22px;
+  letter-spacing:-.02em;
+}
+.garantia-text h2 .rose { color:var(--rose); }
+.garantia-text p { color:var(--ink2); line-height:1.8; }
+.garantia-text p + p { margin-top:14px; }
+.garantia-text p strong { color:var(--ink); font-weight:700; }
+.garantia-text p span { color:var(--rose-d); font-weight:500; }
+
+.garantia-seal {
+  display:inline-flex; align-items:center; gap:10px;
+  margin-top:24px;
+  padding:12px 20px;
+  background:var(--gold-soft);
+  border:1.5px solid var(--gold-pale);
+  border-radius:999px;
+  font-size:.85rem; font-weight:700;
+  color:var(--gold-d);
+}
+
+/* ─── FAQ ─── */
+.faq-section {
+  background: var(--off-white);
+  padding: 70px 0;
+}
+
+.faq-header { text-align:center; margin-bottom:48px; }
+
+.faq-list { max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+
+.faq-item {
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  transition: border-color .2s;
+}
+.faq-item.open { border-color:var(--rose-l); }
+
+.faq-q {
+  padding:22px 26px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  cursor:pointer;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size: clamp(1.2rem, 3.6vw, 1.4rem); font-weight:700;
+  color:var(--ink);
+  user-select:none;
+}
+.faq-toggle {
+  font-size:1.4rem; font-weight:300;
+  color:var(--rose);
+  transition:transform .25s;
+  flex-shrink:0;
+}
+.faq-item.open .faq-toggle { transform:rotate(45deg); }
+
+.faq-a {
+  max-height:0; overflow:hidden;
+  transition: max-height .3s ease;
+}
+.faq-item.open .faq-a { max-height: 600px; }
+.faq-a-inner {
+  padding:0 26px 22px;
+  color:var(--ink2);
+  font-size: clamp(1.18rem, 3.4vw, 1.35rem) !important;
+  line-height:1.75 !important;
+}
+.faq-a-inner strong { color:var(--ink); font-weight:700; }
+
+/* ─── CTA FINAL ─── */
+.cta-final-section {
+  background: var(--rose-pale);
+  padding: 70px 0;
+  border-top: 1px solid var(--border);
+}
+
+.cta-final-grid {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+@media(max-width:860px){ .cta-final-grid { grid-template-columns:1fr; gap:40px; text-align:center; } }
+
+.cta-final-photo-wrap { display:flex; justify-content:center; }
+.cta-final-photo {
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow: 0 20px 56px rgba(220,38,38,.15);
+  max-width:320px;
+  aspect-ratio:3/4;
+}
+.cta-final-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.cta-final-content h2 {
+  font-family:'Playfair Display',serif;
+  font-size: clamp(2.4rem, 6.8vw, 3.5rem);
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.15;
+  margin-bottom:22px;
+  letter-spacing:-.02em;
+}
+.cta-final-content h2 .rose { color:var(--rose); }
+
+.cta-final-btn {
+  display:inline-flex; align-items:center; gap:10px;
+  padding: 24px 40px;
+  background: linear-gradient(135deg, #B91C1C, #DC2626);
+  color: #FFFFFF;
+  border:none; border-radius:14px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800; font-size: 1.3rem;
+  cursor:pointer;
+  transition: transform .15s, box-shadow .2s;
+  box-shadow: 0 10px 30px rgba(220,38,38,.36);
+  margin-top:8px; margin-bottom:14px;
+}
+.cta-final-btn:hover { transform:translateY(-2px); box-shadow:0 16px 40px rgba(200,80,130,.46); }
+
+.cta-final-tip {
+  font-size: 1rem; font-weight:600;
+  color: var(--ink4);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: linear-gradient(160deg, #0F172A 0%, #1E293B 100%);
+  color: rgba(255,255,255,.5);
+  text-align:center;
+  padding: 48px 0;
+}
+.footer-brand {
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem; font-weight:600;
+  color:rgba(255,255,255,.7);
+  margin-bottom:8px;
+}
+.footer p { font-size:.78rem; line-height:1.6; }
+.footer p + p { margin-top:6px; }
+.footer-disclaimer { font-size:.72rem; max-width:560px; margin:12px auto 0; opacity:.6; }
+
+
+/* ─── MODAL ─── */
+.modal {
+  display:none; position:fixed; inset:0; z-index:200;
+  background:rgba(26,16,22,.7);
+  backdrop-filter:blur(4px);
+  align-items:center; justify-content:center;
+  padding:20px;
+}
+.modal.show { display:flex; }
+
+.modal-box {
+  background:var(--white);
+  border-radius:24px;
+  padding:36px 32px;
+  max-width:440px; width:100%;
+  position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.22);
+  max-height:90vh; overflow-y:auto;
+}
+@media(max-width:480px){
+  .modal-box { border-radius:18px; padding:28px 20px; }
+}
+
+.modal-close {
+  position:absolute; top:16px; right:18px;
+  background:none; border:none;
+  width:32px; height:32px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:1.4rem;
+  color:var(--ink3);
+  transition: background .2s;
+}
+.modal-close:hover { background:var(--rose-pale); }
+
+.modal h3 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.4rem,4vw,1.7rem);
+  color:var(--ink);
+  margin-bottom:10px;
+  font-weight:700;
+}
+.modal p { color:var(--ink3); font-size:.95rem; margin-bottom:22px; line-height:1.6; }
+
+.modal-form {
+  display:flex; flex-direction:column;
+  gap:12px;
+  text-align:left;
+}
+.modal-form label { font-size:.82rem; font-weight:600; color:var(--ink2); }
+.modal-form input, .modal-form select {
+  padding:14px 16px;
+  border:1.5px solid var(--border);
+  border-radius:12px;
+  font-family:inherit;
+  font-size:.95rem;
+  color:var(--ink);
+  background:var(--off-white);
+  transition:border-color .2s;
+  width:100%;
+}
+.modal-form input:focus, .modal-form select:focus { outline:none; border-color:var(--rose); }
+
+.modal-submit {
+  margin-top:6px;
+  padding:16px 24px;
+  background:linear-gradient(135deg, var(--rose-d), var(--rose));
+  color:white;
+  border:none; border-radius:12px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700; font-size:1rem;
+  cursor:pointer;
+  transition:transform .15s;
+}
+.modal-submit:hover { transform:translateY(-1px); }
+.modal-submit:disabled { opacity:.6; cursor:not-allowed; }
+
+.checkout-step { display:none; }
+.checkout-step.active { display:block; animation: fadeStep .3s ease; }
+@keyframes fadeStep { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+
+.pix-block {
+  background:var(--rose-pale);
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  padding:22px 18px;
+  margin:18px 0 6px;
+  text-align:center;
+}
+.pix-valor {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.2rem,7vw,2.8rem);
+  font-weight:700;
+  color:var(--rose-d);
+  line-height:1;
+  margin-bottom:6px;
+}
+.pix-valor sup { vertical-align:top; font-size:.42em; color:var(--rose-d); margin-right:4px; font-weight:600; }
+.pix-instr {
+  background:var(--white);
+  border:1px dashed var(--border-d);
+  border-radius:12px;
+  padding:12px 14px;
+  margin-bottom:14px;
+  text-align:left;
+  font-size:.8rem;
+  color:var(--ink2);
+  line-height:1.5;
+}
+.pix-copy-block {
+  display:flex; align-items:center; gap:10px;
+  background:var(--white);
+  border:1.5px solid var(--border);
+  border-radius:14px;
+  padding:12px 14px;
+  margin-bottom:14px;
+}
+.pix-copy-block > div:first-child { flex:1; min-width:0; text-align:left; }
+.pix-copy-label { font-size:.7rem; font-weight:600; color:var(--ink3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
+.pix-copy-val { font-size:.78rem; color:var(--ink2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.pix-copy-btn {
+  background:var(--rose-soft);
+  border:1px solid var(--border);
+  color:var(--rose-d);
+  font-weight:700; font-size:.82rem;
+  padding:9px 14px; border-radius:10px;
+  cursor:pointer; transition:all .2s; flex-shrink:0;
+  font-family:inherit;
+}
+.pix-copy-btn:hover { background:var(--rose-mid); }
+.pix-note { color:var(--ink3); font-size:.78rem; line-height:1.5; margin-top:4px; text-align:left; }
+
+.btn-modal-ghost {
+  background:none; border:none;
+  color:var(--ink3); font-size:.85rem;
+  padding:10px; margin-top:10px;
+  cursor:pointer; width:100%;
+  font-family:inherit; font-weight:500;
+  transition:color .2s;
+}
+.btn-modal-ghost:hover { color:var(--ink); }
+
+.success-icon {
+  width:64px; height:64px;
+  margin:0 auto 18px;
+  background:linear-gradient(135deg,#25d366,#1ea855);
+  color:#fff; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:2rem;
+  box-shadow:0 14px 32px rgba(37,211,102,.3);
+}
+.success-detail-row {
+  display:flex; align-items:center; gap:10px;
+  background:var(--off-white);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px 14px; margin-bottom:8px;
+  font-size:.85rem; color:var(--ink2); text-align:left;
+}
+.success-detail-row > span:first-child { font-size:1.1rem; }
+.success-notify-btn {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  width:100%; margin-top:18px;
+  background:linear-gradient(135deg,#25d366,#1ea855);
+  color:#fff; border:none; border-radius:14px;
+  padding:14px 20px;
+  font-family:inherit; font-weight:700; font-size:.95rem;
+  cursor:pointer; transition:all .2s;
+  box-shadow:0 12px 30px rgba(37,211,102,.32);
+  text-decoration:none;
+}
+.success-notify-btn:hover { transform:translateY(-2px); box-shadow:0 18px 40px rgba(37,211,102,.42); }
+.success-notify-btn > span:first-child { font-size:1.25rem; }
+.success-notify-btn > div { display:flex; flex-direction:column; text-align:left; line-height:1.2; }
+.success-notify-btn small { font-weight:500; opacity:.9; font-size:.72rem; }
+
+
+/* ─── CHECKOUT EMBUTIDO (PROTOCOLO) ─── */
+.checkout-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(17,24,39,.72);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px 12px;
+  z-index:9999;
+}
+.checkout-overlay.show{ display:flex; }
+.checkout-shell{
+  position:relative;
+  width:min(100%,560px);
+  height:min(100%,960px);
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.28);
+}
+.checkout-frame{
+  width:100%;
+  height:100%;
+  border:0;
+  background:#f1f5f9;
+}
+.checkout-overlay-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:999px;
+  background:rgba(255,255,255,.96);
+  color:#111827;
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
+  z-index:5;
+  box-shadow:0 10px 30px rgba(17,24,39,.18);
+}
+.checkout-overlay-close:hover{ transform:scale(1.04); }
+body.checkout-open{ overflow:hidden; }
+@media(max-width:640px){
+  .checkout-overlay{ padding:0; }
+  .checkout-shell{ width:100%; height:100%; border-radius:0; }
+  .checkout-overlay-close{ top:14px; right:14px; }
+}
+
+
+/* ─── DEPOIMENTOS WHATSAPP ─── */
+.depo-section {
+  background: var(--white);
+  padding: 100px 0 80px;
+}
+.depo-header { text-align:center; margin-bottom:48px; }
+.depo-sub {
+  color: var(--ink3);
+  font-size: clamp(1.15rem, 3.2vw, 1.3rem);
+  font-weight: 500;
+  margin-top: 8px;
+}
+.depo-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 4px 30px;
+  scrollbar-width: none;
+}
+.depo-carousel::-webkit-scrollbar { display: none; }
+.depo-phone {
+  flex: 0 0 320px;
+  min-width: 300px;
+  max-width: 340px;
+  background: #0b141a;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.28), 0 0 0 1px rgba(255,255,255,.06);
+  scroll-snap-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media(max-width:400px){
+  .depo-phone { flex: 0 0 290px; min-width: 280px; border-radius: 24px; }
+}
+.depo-phone-notch {
+  width: 100px; height: 22px;
+  background: #0b141a;
+  border-radius: 0 0 16px 16px;
+  margin: 0 auto;
+  position: relative; z-index: 3;
+}
+.depo-wa-header {
+  background: #1f2c34;
+  padding: 8px 12px 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.depo-wa-back { color: #aebac1; font-size: 1.3rem; font-weight: 300; }
+.depo-wa-avatar-wrap { position: relative; }
+.depo-wa-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: .9rem; color: #fff;
+}
+.depo-av1 { background: linear-gradient(135deg, #e05c8a, #c04070); }
+.depo-av2 { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.depo-av3 { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+.depo-av4 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.depo-wa-contact { flex: 1; }
+.depo-wa-name { color: #e9edef; font-size: .88rem; font-weight: 600; line-height: 1.2; }
+.depo-wa-status { color: #8696a0; font-size: .68rem; font-weight: 400; }
+.depo-wa-call { color: #aebac1; font-size: .95rem; }
+.depo-wa-chat {
+  flex: 1;
+  background: #0b141a;
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='p' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='.5' fill='%23ffffff' fill-opacity='.03'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
+  padding: 8px 10px 12px;
+  display: flex; flex-direction: column; gap: 4px;
+  min-height: 320px; max-height: 380px;
+  overflow-y: auto;
+}
+.depo-wa-chat::-webkit-scrollbar { width: 2px; }
+.depo-wa-chat::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 2px; }
+.depo-wa-date {
+  text-align: center; color: #8696a0; font-size: .65rem; font-weight: 500;
+  background: rgba(11,20,26,.8); padding: 3px 10px; border-radius: 6px;
+  margin: 4px auto 6px; width: fit-content;
+}
+.depo-wa-msg { display: flex; }
+.depo-wa-them { justify-content: flex-start; }
+.depo-wa-me { justify-content: flex-end; }
+.depo-wa-bubble {
+  max-width: 85%; padding: 6px 10px 4px; border-radius: 8px;
+  font-size: .82rem; line-height: 1.45; position: relative; word-wrap: break-word;
+}
+.depo-bubble-them { background: #1f2c34; color: #e9edef; border-top-left-radius: 2px; }
+.depo-bubble-me { background: #005c4b; color: #e9edef; border-top-right-radius: 2px; }
+.depo-wa-meta {
+  display: flex; align-items: center; justify-content: flex-end; gap: 3px;
+  margin-top: 2px; float: right; margin-left: 8px; position: relative; top: 4px;
+}
+.depo-wa-meta span { font-size: .58rem; color: #8696a0; }
+.depo-wa-input-bar {
+  background: #1f2c34; padding: 8px 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.depo-wa-emoji { font-size: 1.1rem; color: #8696a0; }
+.depo-wa-input-fake {
+  flex: 1; background: #2a3942; border-radius: 20px;
+  padding: 8px 16px; color: #8696a0; font-size: .78rem;
+}
+.depo-wa-mic { font-size: 1.1rem; color: #8696a0; }
+.depo-nav {
+  display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 24px;
+}
+.depo-nav-btn {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1.5px solid var(--border); background: var(--white);
+  color: #DC2626; font-size: 1.4rem; font-weight: 300;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all .2s;
+}
+.depo-nav-btn:hover { background: var(--rose-pale); border-color: #EF4444; }
+.depo-dots { display: flex; gap: 8px; }
+.depo-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); transition: all .25s; cursor: pointer;
+}
+.depo-dot.active { background: #DC2626; width: 24px; border-radius: 4px; }
+.depo-cta-wrap { text-align: center; margin-top: 40px; }
+@media(max-width:720px){
+  .depo-section { padding: 80px 0 60px; }
+  .depo-carousel { gap: 16px; padding-left: 0; }
+  .depo-phone { flex: 0 0 88vw; min-width: 280px; max-width: 340px; }
+}
+
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-brain"></i>
-                <span>Destravador de Sonhos</span>
-            </div>
-            <nav class="nav">
-                <a href="#problema" class="nav-link">O Problema</a>
-                <a href="#solucao" class="nav-link">A Solução</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#cta" class="nav-link cta-nav">Acessar Curso</a>
-            </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#problema" class="mobile-link">O Problema</a>
-        <a href="#solucao" class="mobile-link">A Solução</a>
-        <a href="#sobre" class="mobile-link">Sobre</a>
-        <a href="#cta" class="mobile-link">Acessar Curso</a>
+
+
+<!-- ─── SITE ─── -->
+
+<div class="site" id="site">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-h1">
+          Em 7 dias,
+          <span class="accent">ele volta a te procurar.</span>
+        </h1>
+
+        <p class="hero-sub">O passo a passo que j&#225; ajudou <strong>+1.200 mulheres</strong> a reverter o distanciamento &#8212; <strong>sem implorar, sem cobrar, sem se humilhar</strong>. Criado por Josiane Monteiro, terapeuta com 11 anos de experi&#234;ncia.</p>
+
+        <div class="hero-cta-row">
+          <button class="btn-primary" onclick="scrollTo2('oferta')">Quero ele de volta em 7 dias &#8594;</button>
+        </div>
+
+        <div class="hero-trust" style="margin:0 auto;">
+          <div class="htrust-item">⭐ +1.200 mulheres atendidas</div>
+          <div class="htrust-sep"></div>
+          <div class="htrust-item">🎓 11 anos como terapeuta</div>
+          <div class="htrust-sep"></div>
+          <div class="htrust-item">🛡️ Garantia de 7 dias</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- IDENTIFICAÇÃO -->
+<section class="ident-section" id="identificacao">
+  <div class="container">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      VOCÊ SE RECONHECE AQUI?
+    </div>
+    <h2 class="section-title">
+      O silêncio dele <span class="rose">dói diferente</span>, né?
+    </h2>
+    <p class="ident-intro">Se voc&#234; se sente assim, <strong>respira</strong> &#8212; existe um jeito de virar esse jogo.</p>
+
+    <div class="ident-grid">
+      <div class="ident-item">
+        <div class="ident-ico">📵</div>
+        <div class="ident-txt">Ele <strong>visualiza e n&#227;o responde</strong> &#8212; e voc&#234; fica relendo a &#250;ltima conversa.</div>
+      </div>
+      <div class="ident-item">
+        <div class="ident-ico">😰</div>
+        <div class="ident-txt">Voc&#234; sente que <strong>j&#225; errou</strong> &#8212; mandou mensagem demais, cobrou, e isso afastou ele ainda mais.</div>
+      </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Você Sente Que Tem <span class="highlight">Planos e Ideias</span>, Mas Algo Sempre Te Trava na Hora de Agir?
-                </h1>
-                <p class="hero-subtitle">
-                    Muitas pessoas inteligentes e esforçadas não falham por falta de capacidade, mas por <strong>bloqueios mentais invisíveis</strong> que impedem a ação consistente.
-                </p>
-                <a href="#problema" class="btn btn-secondary">
-                    <i class="fas fa-chevron-down"></i> Entenda Seu Bloqueio
-                </a>
-            </div>
-            <div class="hero-image">
-                <div class="floating-icon">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-            </div>
+    <div class="ident-reveal">
+      <p>O que parece desinteresse, <strong>&#233; mecanismo de defesa dele</strong>. E existe um jeito de reverter &#8212; em 7 dias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO 7 DIAS -->
+<section class="solucao-section" id="solucao">
+  <div class="container">
+    <div class="sol-header">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        O PROTOCOLO
+      </div>
+      <h2 class="section-title">3 passos. <span class="rose">7 dias.</span> Ele volta.</h2>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-day">Dias 1-2</div>
+        <div class="pillar-title">Silêncio Estratégico</div>
+        <div class="pillar-desc">Voc&#234; para de agir por impulso. <strong>O peso sai do peito.</strong></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-day">Dias 3-5</div>
+        <div class="pillar-title">Ausência Magnética</div>
+        <div class="pillar-desc">Ele come&#231;a a sentir sua falta. <strong>Voc&#234; volta ao controle.</strong></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-day">Dias 6-7</div>
+        <div class="pillar-title">O Retorno</div>
+        <div class="pillar-desc"><strong>Ele vem at&#233; voc&#234;</strong> &#8212; sem voc&#234; precisar dar o primeiro passo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="oferta-section" id="oferta">
+  <div class="container">
+    <div class="oferta-box">
+      <div class="oferta-box-pre">
+        <span class="hero-badge-dot"></span>
+        VAGAS LIMITADAS
+      </div>
+      <div class="oferta-product-name">Protocolo de Retorno</div>
+      <p class="oferta-product-sub">O passo a passo de 7 dias pra ele voltar a te procurar &#8212; <strong>sem implorar, sem humilhar, sem errar</strong>.</p>
+
+      <div class="oferta-price-old">De R$ 197,00</div>
+      <div class="oferta-price-now"><small>R$</small>47</div>
+      <div class="oferta-price-info">Pagamento &#250;nico &#183; Acesso imediato &#183; R$ 47 = menos que um jantar fora</div>
+
+      <div class="ancora-emocional">
+        <div class="ancora-emocional-icon">&#128148;</div>
+        <p>Cada dia que voc&#234; espera, <strong>ele se afasta mais</strong>. Enquanto voc&#234; rel&#234; essa p&#225;gina, outra mulher j&#225; est&#225; aplicando o m&#233;todo. Em 7 dias, <strong>ela vai ter ele de volta</strong>. E voc&#234;?</p>
+      </div>
+
+      <div class="vagas-oferta">
+        <div class="vagas-oferta-top">
+          <div class="vagas-oferta-dot"></div>
+          &#9888;&#65039; Restam apenas <span id="vagasNum">17</span> vagas com esse pre&#231;o
         </div>
-    </section>
-
-    <!-- Problema Section -->
-    <section class="problema" id="problema">
-        <div class="container">
-            <h2 class="section-title">Isso Acontece Com Você?</h2>
-            <p class="section-subtitle">Reconheça os sinais de que bloqueios mentais podem estar atrapalhando seu progresso:</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="card-title">Procrastinação Constante</h3>
-                    <p class="card-text">Você sabe exatamente o que precisa fazer, mas sempre encontra uma desculpa para adiar para amanhã, depois... e o tempo passa.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3 class="card-title">Projetos Inacabados</h3>
-                    <p class="card-text">Começa cheio de empolgação e energia, mas no meio do caminho perde o fôlego e nunca termina o que começou.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3 class="card-title">Sensação de Travamento</h3>
-                    <p class="card-text">Sente que existe uma barreira invisível impedindo você de avançar, mesmo querendo muito alcançar seus objetivos.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-hourglass-half"></i>
-                    </div>
-                    <h3 class="card-title">Tempo Escorregando</h3>
-                    <p class="card-text">Tem a sensação angustiante de estar parado no mesmo lugar enquanto o tempo passa e os outros avançam.</p>
-                </div>
-            </div>
-
-            <div class="insight-box">
-                <div class="insight-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="insight-content">
-                    <h3>A Boa Notícia É...</h3>
-                    <p>Esse tipo de bloqueio <strong>não está ligado à falta de capacidade ou inteligência</strong>. Muitas vezes, ele tem origem em padrões mentais que podem ser compreendidos e trabalhados com métodos adequados.</p>
-                </div>
-            </div>
+        <div class="vagas-countdown-row">
+          <div class="vagas-countdown-bar">
+            <div class="vagas-countdown-fill" id="vagasBar" style="width:85%"></div>
+          </div>
+          <div class="vagas-countdown-num" id="vagasNumBar">17</div>
         </div>
-    </section>
-
-    <!-- Solução Section -->
-    <section class="solucao" id="solucao">
-        <div class="container">
-            <h2 class="section-title">O Método Destravador de Sonhos</h2>
-            <p class="section-subtitle">Uma abordagem estruturada para identificar e superar os bloqueios que impedem você de realizar seus planos</p>
-
-            <div class="solucao-content">
-                <div class="solucao-text">
-                    <h3>O Que Você Vai Descobrir</h3>
-                    <ul class="benefits-list">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <span>Como identificar os padrões mentais que travam sua ação</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <span>Técnicas práticas para vencer a procrastinação crônica</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <span>Estratégias para manter a consistência em seus projetos</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <span>Métodos comprovados de desenvolvimento pessoal</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <span>Como transformar ideias em ações concretas e resultados reais</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="solucao-highlight">
-                    <div class="author-box">
-                        <i class="fas fa-user-circle"></i>
-                        <div>
-                            <h4>Criado por Jair Peres</h4>
-                            <p>Especialista em desenvolvimento pessoal e destravamento de potencial humano</p>
-                        </div>
-                    </div>
-                    <div class="platform-info">
-                        <i class="fas fa-shield-alt"></i>
-                        <p>Curso disponibilizado através da <strong>Hotmart</strong>, plataforma líder em produtos digitais com pagamento 100% seguro</p>
-                    </div>
-                </div>
-            </div>
+        <div class="vagas-countdown-label">Vagas est&#227;o acabando &#8212; pre&#231;o sobe quando chegar a 0</div>
+        <div class="vagas-timer">
+          <div class="vagas-timer-block" id="timerH">02</div>
+          <div class="vagas-timer-sep">:</div>
+          <div class="vagas-timer-block" id="timerM">47</div>
+          <div class="vagas-timer-sep">:</div>
+          <div class="vagas-timer-block" id="timerS">33</div>
         </div>
-    </section>
+        <div class="vagas-timer-label">Tempo restante com desconto</div>
+      </div>
 
-    <!-- Aviso de Afiliação Section -->
-    <section class="affiliate-disclosure" id="afiliacao">
-        <div class="container">
-            <div class="disclosure-box">
-                <div class="disclosure-header">
-                    <i class="fas fa-megaphone"></i>
-                    <h3>📢 Divulgação Importante</h3>
-                </div>
-                <div class="disclosure-content">
-                    <p class="disclosure-main">
-                        Meu nome é <strong>Ronaldo da Cunha Silva</strong> e sou um <strong>afiliado independente</strong> do curso Destravador de Sonhos, criado por <strong>Jair Peres</strong>.
-                    </p>
-                    <p>
-                        Ao clicar no botão abaixo, você será direcionado para a <strong>plataforma Hotmart</strong>, onde o pagamento é processado de forma segura diretamente com o produtor do curso.
-                    </p>
-                    <p>
-                        Se você adquirir o produto através deste link, posso receber uma <strong>comissão como afiliado</strong>, sem nenhum custo adicional para você.
-                    </p>
-                    <p class="disclosure-footer">
-                        Esta comissão ajuda a manter este site no ar e me permite continuar compartilhando conteúdo de qualidade.
-                    </p>
-                </div>
-                <div class="disclosure-badges">
-                    <span class="badge"><i class="fas fa-handshake"></i> Transparência Total</span>
-                    <span class="badge"><i class="fas fa-dollar-sign"></i> Sem Custo Extra</span>
-                    <span class="badge"><i class="fas fa-lock"></i> Pagamento Seguro</span>
-                </div>
-            </div>
+      <div class="oferta-includes">
+        <div class="oferta-includes-item"><strong>Protocolo completo dia a dia</strong> &#8212; saiba exatamente o que fazer em cada um dos 7 dias</div>
+        <div class="oferta-includes-item"><strong>Mensagens prontas</strong> &#8212; copie e envie no momento certo, sem risco de errar</div>
+        <div class="oferta-includes-item"><strong>Guia do Sil&#234;ncio Estrat&#233;gico</strong> &#8212; quando calar e quando falar pra criar saudade</div>
+        <div class="oferta-includes-item"><strong>Suporte direto pelo WhatsApp</strong> &#8212; d&#250;vida? Eu te ajudo pessoalmente</div>
+      </div>
+
+      <button class="oferta-cta" onclick="openCheckoutPage('protocolo')">
+        SIM! Quero ele de volta em 7 dias &#8594;
+      </button>
+
+      <div class="oferta-secure">
+        <span>&#128274; Pagamento seguro</span>
+        <span>&#128737;&#65039; Garantia de 7 dias</span>
+        <span>&#128274; 100% sigiloso</span>
+      </div>
+
+      <a class="oferta-whatsapp-doubt" href="https://wa.me/5524981517067?text=Oi%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Protocolo%20de%20Retorno..." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Est&#225; com d&#250;vida? Fale comigo no WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia-section">
+  <div class="container">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <div style="font-size:3.5rem;margin-bottom:16px;">&#128737;&#65039;</div>
+      <div class="section-label" style="justify-content:center;">
+        <span class="section-label-line"></span>
+        MINHA PROMESSA PRA VOC&#202;
+      </div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3rem);font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:18px;">
+        Voc&#234; tem <span style="color:#DC2626;">7 dias</span> pra testar &#8212; o risco &#233; todo meu.
+      </h2>
+      <p style="color:var(--ink2);font-size:clamp(1.1rem,3vw,1.25rem);line-height:1.7;margin-bottom:18px;">
+        Aplique o m&#233;todo por 7 dias. Se n&#227;o te ajudar, <strong>eu devolvo cada centavo</strong> &#8212; sem perguntas, sem burocracia.
+      </p>
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;background:var(--gold-soft);border:1.5px solid var(--gold-pale);border-radius:999px;font-size:.85rem;font-weight:700;color:var(--gold-d);">
+        &#128737;&#65039; Garantia incondicional de 7 dias
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── DEPOIMENTOS WHATSAPP ─── -->
+<section class="depo-section" id="depoimentos">
+  <div class="container">
+    <div class="depo-header">
+      <div class="section-label" style="justify-content:center;">
+        <span class="section-label-line"></span>
+        RESULTADOS REAIS
+        <span class="section-label-line"></span>
+      </div>
+      <h2 class="section-title" style="text-align:center;">
+        Elas <span class="rose">voltaram a ser procuradas</span>.
+      </h2>
+      <p class="depo-sub">Mensagens reais de mulheres que aplicaram o Protocolo de Retorno.</p>
+    </div>
+
+    <div class="depo-carousel" id="depoCarousel">
+
+      <!-- DEPOIMENTO 1 - Camila -->
+      <div class="depo-phone">
+        <div class="depo-phone-notch"></div>
+        <div class="depo-wa-header">
+          <div class="depo-wa-back">&#8249;</div>
+          <div class="depo-wa-avatar-wrap"><div class="depo-wa-avatar depo-av1">C</div></div>
+          <div class="depo-wa-contact">
+            <div class="depo-wa-name">Camila</div>
+            <div class="depo-wa-status">online</div>
+          </div>
+          <div class="depo-wa-call">&#128222;</div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <div class="cta-box">
-                <h2 class="cta-title">Pronto Para Destravar Seus Planos?</h2>
-                <p class="cta-text">
-                    Acesse o curso completo na plataforma Hotmart e comece sua jornada de transformação hoje mesmo.
-                </p>
-                <a href="https://jairperes.com.br/destravadordesonhos/?ref=K103841242Y" 
-                   class="btn btn-primary btn-large" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   id="mainCta">
-                    <i class="fas fa-external-link-alt"></i>
-                    Acessar Curso na Hotmart
-                </a>
-                <p class="cta-disclaimer">
-                    <i class="fas fa-info-circle"></i>
-                    Você será redirecionado para a página oficial de vendas na plataforma Hotmart
-                </p>
-                <div class="trust-indicators">
-                    <div class="trust-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Pagamento Seguro</span>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fas fa-undo"></i>
-                        <span>Garantia Hotmart</span>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fas fa-headset"></i>
-                        <span>Suporte Direto</span>
-                    </div>
-                </div>
-            </div>
+        <div class="depo-wa-chat">
+          <div class="depo-wa-date">hoje</div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">JOSI!! &#128557;&#128557; ele me mandou mensagem!!<div class="depo-wa-meta"><span>09:41</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-me">
+            <div class="depo-wa-bubble depo-bubble-me">NOSSA!! O que ele disse??<div class="depo-wa-meta"><span>09:41</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">"saudade de vc, posso te ligar?" MEU DEUS eu tremi toda kkkk<div class="depo-wa-meta"><span>09:42</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Faz 2 semanas que ele n&#227;o falava comigo e eu seguindo o protocolo direitinho... no dia 6 ele me procurou &#129802;<div class="depo-wa-meta"><span>09:42</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-me">
+            <div class="depo-wa-bubble depo-bubble-me">Camila!! &#129401;&#129401; Seguiu certinho o sil&#234;ncio do dia 3?<div class="depo-wa-meta"><span>09:43</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Sim!! Foi a parte mais dif&#237;cil mas eu n&#227;o mandei NADA e foi exatamente isso que fez ele sentir minha falta &#128149; seu protocolo salvou minha vida juro<div class="depo-wa-meta"><span>09:44</span></div></div>
+          </div>
         </div>
-    </section>
-
-    <!-- Sobre Section -->
-    <section class="sobre" id="sobre">
-        <div class="container">
-            <div class="sobre-content">
-                <div class="sobre-icon">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="sobre-text">
-                    <h2 class="section-title">Quem Está Por Trás Deste Site?</h2>
-                    <p>
-                        Olá! Meu nome é <strong>Ronaldo da Cunha Silva</strong>, e sou um entusiasta de desenvolvimento pessoal e transformação de vida.
-                    </p>
-                    <p>
-                        Criei este site para compartilhar produtos e cursos que acredito que podem genuinamente ajudar pessoas a superarem seus desafios e alcançarem seus objetivos.
-                    </p>
-                    <p>
-                        Atuo como <strong>afiliado independente</strong>, o que significa que não sou o criador dos cursos que divulgo, mas sim alguém que pesquisa, testa e recomenda conteúdos de qualidade.
-                    </p>
-                    <p class="sobre-highlight">
-                        <i class="fas fa-envelope"></i>
-                        <strong>Quer entrar em contato?</strong> Escreva para: <a href="mailto:ronaldoten07@gmail.com">ronaldoten07@gmail.com</a>
-                    </p>
-                </div>
-            </div>
+        <div class="depo-wa-input-bar">
+          <div class="depo-wa-emoji">&#128522;</div>
+          <div class="depo-wa-input-fake">Mensagem</div>
+          <div class="depo-wa-mic">&#127908;</div>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-section">
-                    <h4>Informações Legais</h4>
-                    <p><strong>Responsável pelo site:</strong> Ronaldo da Cunha Silva</p>
-                    <p><strong>CPF:</strong> 121.496.937-20</p>
-                    <p><strong>Email:</strong> <a href="mailto:ronaldoten07@gmail.com">ronaldoten07@gmail.com</a></p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Sobre Este Site</h4>
-                    <p>Este é um site de divulgação como afiliado. O curso "Destravador de Sonhos" é de propriedade de <strong>Jair Peres</strong> e comercializado através da plataforma <strong>Hotmart</strong>.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Links Úteis</h4>
-                    <ul class="footer-links">
-                        <li><a href="privacy.html">Política de Privacidade</a></li>
-                        <li><a href="terms.html">Termos de Uso</a></li>
-                        <li><a href="mailto:ronaldoten07@gmail.com">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-disclaimer">
-                <p>
-                    <i class="fas fa-info-circle"></i>
-                    <strong>Aviso Importante:</strong> Este site não faz parte do site da Hotmart, Facebook, Google ou de qualquer uma dessas empresas. Além disso, este site NÃO é endossado por essas empresas de forma alguma. 
-                </p>
-                <p>
-                    Eventuais reclamações, dúvidas sobre o produto, reembolsos ou suporte técnico devem ser direcionados diretamente à <strong>Hotmart</strong> e ao produtor <strong>Jair Peres</strong>.
-                </p>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Ronaldo da Cunha Silva - Todos os direitos reservados</p>
-            </div>
+      <!-- DEPOIMENTO 2 - Raquel -->
+      <div class="depo-phone">
+        <div class="depo-phone-notch"></div>
+        <div class="depo-wa-header">
+          <div class="depo-wa-back">&#8249;</div>
+          <div class="depo-wa-avatar-wrap"><div class="depo-wa-avatar depo-av2">R</div></div>
+          <div class="depo-wa-contact">
+            <div class="depo-wa-name">Raquel</div>
+            <div class="depo-wa-status">online</div>
+          </div>
+          <div class="depo-wa-call">&#128222;</div>
         </div>
-    </footer>
+        <div class="depo-wa-chat">
+          <div class="depo-wa-date">hoje</div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Josi, preciso te contar &#128591;<div class="depo-wa-meta"><span>14:12</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Ele me desbloqueou e mandou "desculpa sumir, posso te ver?" EU N&#195;O ACREDITO &#128557;<div class="depo-wa-meta"><span>14:12</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-me">
+            <div class="depo-wa-bubble depo-bubble-me">RAQUEL!! &#129401;&#129401; Meu Deus!! Usou o C&#243;digo do Desbloqueio?<div class="depo-wa-meta"><span>14:13</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Sim!! Aquele passo 3 foi m&#225;gico kkkk ele desbloqueou no dia seguinte e eu nem precisei mandar mensagem primeiro<div class="depo-wa-meta"><span>14:14</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Chorei de al&#237;vio. Achei que ia ter que implorar mas foi tudo natural. Obrigada demais &#128149;<div class="depo-wa-meta"><span>14:15</span></div></div>
+          </div>
+        </div>
+        <div class="depo-wa-input-bar">
+          <div class="depo-wa-emoji">&#128522;</div>
+          <div class="depo-wa-input-fake">Mensagem</div>
+          <div class="depo-wa-mic">&#127908;</div>
+        </div>
+      </div>
 
-    <script src="js/main.js"></script>
+      <!-- DEPOIMENTO 3 - Fernanda -->
+      <div class="depo-phone">
+        <div class="depo-phone-notch"></div>
+        <div class="depo-wa-header">
+          <div class="depo-wa-back">&#8249;</div>
+          <div class="depo-wa-avatar-wrap"><div class="depo-wa-avatar depo-av3">F</div></div>
+          <div class="depo-wa-contact">
+            <div class="depo-wa-name">Fernanda</div>
+            <div class="depo-wa-status">visto por &#250;ltimo hoje &#224;s 15:38</div>
+          </div>
+          <div class="depo-wa-call">&#128222;</div>
+        </div>
+        <div class="depo-wa-chat">
+          <div class="depo-wa-date">ontem</div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Menina, eu tava desesperada. Fazia 3 semanas que ele tinha sumido, eu tinha mandado um monte de mensagem, ligado, chorado no &#225;udio... tava feio &#128532;<div class="depo-wa-meta"><span>22:07</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-me">
+            <div class="depo-wa-bubble depo-bubble-me">E a&#237;? Come&#231;ou o protocolo?<div class="depo-wa-meta"><span>22:08</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Sim!! Parei de mandar mensagem no dia 1 e foi a coisa mais dif&#237;cil da minha vida kkkk mas no dia 5 ele me mandou um "oi" do nada<div class="depo-wa-meta"><span>22:09</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">E eu usei a mensagem do dia 6 que vc ensinou... ele t&#225; me ligando todo dia agora &#129317; O sil&#234;ncio funciona demais!!<div class="depo-wa-meta"><span>22:10</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-me">
+            <div class="depo-wa-bubble depo-bubble-me">Fernanda!! &#129401;&#128149; Isso a&#237;! Voc&#234; merecia esse resultado!<div class="depo-wa-meta"><span>22:11</span></div></div>
+          </div>
+        </div>
+        <div class="depo-wa-input-bar">
+          <div class="depo-wa-emoji">&#128522;</div>
+          <div class="depo-wa-input-fake">Mensagem</div>
+          <div class="depo-wa-mic">&#127908;</div>
+        </div>
+      </div>
+
+      <!-- DEPOIMENTO 4 - Amanda -->
+      <div class="depo-phone">
+        <div class="depo-phone-notch"></div>
+        <div class="depo-wa-header">
+          <div class="depo-wa-back">&#8249;</div>
+          <div class="depo-wa-avatar-wrap"><div class="depo-wa-avatar depo-av4">A</div></div>
+          <div class="depo-wa-contact">
+            <div class="depo-wa-name">Amanda</div>
+            <div class="depo-wa-status">online</div>
+          </div>
+          <div class="depo-wa-call">&#128222;</div>
+        </div>
+        <div class="depo-wa-chat">
+          <div class="depo-wa-date">hoje</div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Josi, n&#227;o sei como te agradecer &#129802;<div class="depo-wa-meta"><span>11:23</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">A gente tava separada h&#225; 2 meses. Eu achei que era o fim. Comecei o protocolo e no dia 7 ele apareceu na minha casa com flores &#127800;<div class="depo-wa-meta"><span>11:24</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-me">
+            <div class="depo-wa-bubble depo-bubble-me">AMANDA!! &#127800; Flores!! Que lindo demais!! Conta tudo!<div class="depo-wa-meta"><span>11:25</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Ele disse que sentiu minha falta de um jeito que nunca tinha sentido antes. Que o sil&#234;ncio fez ele pensar em tudo que a gente viveu &#128148;&#10132;&#10084;&#65039;<div class="depo-wa-meta"><span>11:26</span></div></div>
+          </div>
+          <div class="depo-wa-msg depo-wa-them">
+            <div class="depo-wa-bubble depo-bubble-them">Melhor investimento da minha vida. Os R$47 mudaram minha hist&#243;ria toda &#128591;&#10024;<div class="depo-wa-meta"><span>11:27</span></div></div>
+          </div>
+        </div>
+        <div class="depo-wa-input-bar">
+          <div class="depo-wa-emoji">&#128522;</div>
+          <div class="depo-wa-input-fake">Mensagem</div>
+          <div class="depo-wa-mic">&#127908;</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel nav -->
+    <div class="depo-nav">
+      <button class="depo-nav-btn" id="depoPrev" aria-label="Anterior">&#8249;</button>
+      <div class="depo-dots" id="depoDots"></div>
+      <button class="depo-nav-btn" id="depoNext" aria-label="Pr&#243;ximo">&#8250;</button>
+    </div>
+
+    <div class="depo-cta-wrap">
+      <button class="btn-primary" onclick="scrollTo2('oferta')" style="background:linear-gradient(135deg,#B91C1C,#DC2626);box-shadow:0 8px 24px rgba(220,38,38,.32);">
+        Quero ter esse resultado tamb&#233;m &#8594;
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label" style="justify-content:center;">
+        <span class="section-label-line"></span>
+        ME PERGUNTARAM MUITO ISSO
+        <span class="section-label-line"></span>
+      </div>
+      <h2 class="section-title">
+        Quero te tirar <span class="rose">qualquer dúvida</span>.
+      </h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Pra que tipo de situa&#231;&#227;o funciona?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Qualquer cen&#225;rio de distanciamento. <strong>Inclusive se faz meses</strong> e mesmo sem relacionamento formal.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Isso &#233; manipula&#231;&#227;o?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          N&#227;o. <strong>&#201; intelig&#234;ncia emocional</strong>. Voc&#234; para de fazer o que afasta e come&#231;a a fazer o que cria saudade natural.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>E se eu n&#227;o gostar?</span>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <strong>7 dias de garantia</strong>. Se n&#227;o te ajudar, devolvo 100% &#8212; sem perguntas. O risco &#233; todo meu.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final-section">
+  <div class="container">
+    <div style="max-width:560px;margin:0 auto;text-align:center;">
+      <div class="section-label" style="justify-content:center;">
+        <span class="section-label-line"></span>
+        AGORA &#201; COM VOC&#202;
+      </div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3rem);font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:18px;">
+        Em 7 dias, <span style="color:#DC2626;">ele pode voltar a te procurar</span>.
+      </h2>
+      <p style="color:var(--ink2);font-size:clamp(1.1rem,3vw,1.25rem);line-height:1.7;margin-bottom:24px;">
+        Voc&#234; pode continuar esperando ele mudar sozinho. Ou pode <strong>come&#231;ar hoje</strong> com um protocolo claro, dia a dia, que j&#225; funcionou com +1.200 mulheres.
+      </p>
+      <button class="cta-final-btn" onclick="scrollTo2('oferta')" style="background:linear-gradient(135deg,#B91C1C,#DC2626);color:#FFFFFF;border:none;border-radius:14px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;cursor:pointer;padding:24px 40px;box-shadow:0 10px 30px rgba(220,38,38,.36);">
+        SIM! Quero ele de volta em 7 dias &#8594;
+      </button>
+      <div style="font-size:1rem;font-weight:600;color:var(--ink4);margin-top:14px;">Acesso imediato &#183; Garantia de 7 dias &#183; R$ 47 = menos que um jantar fora</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">Protocolo de Retorno · Josi</div>
+    <p>© 2026 — Todos os direitos reservados.</p>
+    <p class="footer-disclaimer">
+      Este conteúdo é informativo e não substitui acompanhamento psicológico profissional. Os resultados variam de acordo com a aplicação individual de cada pessoa. Ao adquirir, você concorda com a política de privacidade e termos de uso.
+    </p>
+  </div>
+</footer>
+
+</div><!-- /site -->
+
+
+
+<!-- CHECKOUT NOVO DO PROTOCOLO DE RETORNO -->
+<div class="checkout-overlay" id="checkoutOverlay" aria-hidden="true">
+  <div class="checkout-shell">
+    <button class="checkout-overlay-close" type="button" onclick="closeCheckoutPage()" aria-label="Fechar checkout">×</button>
+    <iframe class="checkout-frame" id="checkoutFrame" title="Checkout Protocolo de Retorno"></iframe>
+  </div>
+</div>
+
+
+<!-- MODAL CHECKOUT (3 etapas: dados → Pix → confirmação) -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+
+    <!-- ETAPA 1: DADOS -->
+    <div class="checkout-step active" id="step-data">
+      <h3 id="modal-title">Como você quer receber o acesso?</h3>
+      <p id="modal-subtitle">Preencha pra que eu te envie tudo direto, sem demora.</p>
+
+      <form class="modal-form" id="leadForm" onsubmit="goToPix(event)">
+        <input type="hidden" id="produto" name="produto" value="Protocolo de Retorno">
+        <label for="nome">Seu primeiro nome</label>
+        <input type="text" id="nome" name="nome" required placeholder="Ex: Camila">
+
+        <label for="canal">Quero receber por:</label>
+        <select id="canal" name="canal" required>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="E-mail">E-mail</option>
+        </select>
+
+        <label for="contato">Seu WhatsApp ou e-mail</label>
+        <input type="text" id="contato" name="contato" required placeholder="(00) 00000-0000 ou seu@email.com">
+
+        <button type="submit" class="modal-submit" id="submitBtn">Continuar para o pagamento →</button>
+      </form>
+    </div>
+
+    <!-- ETAPA 2: PIX -->
+    <div class="checkout-step" id="step-pix">
+      <h3>Pagamento via Pix</h3>
+      <p>Faça o Pix de <strong style="color:var(--ink)" id="pix-valor-txt">R$ 47,00</strong> e clique em "Já paguei" abaixo.</p>
+
+      <div class="pix-block">
+        <div class="pix-valor" id="pix-valor-big"><sup>R$</sup>47</div>
+        <p class="pix-desc">Pix à vista · pagamento único e seguro</p>
+
+        <div class="pix-instr">
+          Abra o app do seu banco, vá em <strong style="color:var(--ink)">Pix → Copia e Cola</strong> e cole o código abaixo.
+        </div>
+
+        <div class="pix-copy-block">
+          <div>
+            <div class="pix-copy-label">Pix Copia e Cola</div>
+            <div class="pix-copy-val">Toque no botão para copiar →</div>
+          </div>
+          <button type="button" class="pix-copy-btn" id="copyBtn" onclick="copyPix()">Copiar Pix</button>
+        </div>
+
+        <p class="pix-note">⚠️ Após fazer o Pix, clique em "Já paguei" abaixo para confirmar.</p>
+      </div>
+
+      <button type="button" class="modal-submit" onclick="confirmPaid()">Já paguei — confirmar pedido ✓</button>
+      <button type="button" class="btn-modal-ghost" onclick="backToData()">← Voltar e corrigir meus dados</button>
+    </div>
+
+    <!-- ETAPA 3: SUCESSO -->
+    <div class="checkout-step" id="step-success">
+      <div class="success-icon">✓</div>
+      <h3 style="text-align:center">Pedido recebido!</h3>
+      <p style="text-align:center">Seu pedido foi recebido.<br>Assim que confirmarmos o Pix, você recebe o acesso.</p>
+
+      <div style="margin-top:18px">
+        <div class="success-detail-row"><span>👤</span><span><strong>Nome:</strong> <span id="sc-nome">—</span></span></div>
+        <div class="success-detail-row"><span>📩</span><span><strong>Contato:</strong> <span id="sc-contato">—</span> (<span id="sc-canal">—</span>)</span></div>
+        <div class="success-detail-row"><span>📦</span><span><strong>Produto:</strong> <span id="sc-produto">—</span></span></div>
+        <div class="success-detail-row"><span>💰</span><span><strong>Valor:</strong> <span id="sc-valor">—</span> via Pix</span></div>
+      </div>
+
+      <a class="success-notify-btn" id="sc-wa-btn" href="#" target="_blank" rel="noopener">
+        <span>💬</span>
+        <div>Avisar pelo WhatsApp <small>Toque para confirmar mais rápido</small></div>
+      </a>
+
+      <button type="button" class="btn-modal-ghost" onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const WA_NUMBER = '5524981517067';
+
+const PIX_CODE = `00020126580014BR.GOV.BCB.PIX01365676b3fe-5fdc-42f8-922d-5b49adbfb78c520400005303986540547.005802BR5925Josiane Monteiro de Olive6009SAO PAULO62140510KtVeMC9stt6304C1B4`;
+const PIX_CODE_DESBL = `00020126580014BR.GOV.BCB.PIX01365676b3fe-5fdc-42f8-922d-5b49adbfb78c520400005303986540512.905802BR5925Josiane Monteiro de Olive6009SAO PAULO62140510srZTWev8Id6304C2C2`;
+
+let currentProduto = 'protocolo';
+let currentLead = null;
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const site = document.getElementById('site');
+  if(site) site.classList.add('revealed');
+});
+
+function enterSite(target){
+  const landing = document.getElementById('landing');
+  const site = document.getElementById('site');
+  if(landing){
+    landing.classList.add('hidden');
+    setTimeout(()=>{ landing.style.display = 'none'; }, 500);
+  }
+  if(site) site.classList.add('revealed');
+  if(target==='bloqueio'){
+    const sec = document.getElementById('bloqueio');
+    if(sec) sec.scrollIntoView({behavior:'smooth'});
+  }
+}
+
+function scrollTo2(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function toggleFaq(el){
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!wasOpen) item.classList.add('open');
+}
+
+const PRODUTOS = {
+  protocolo: {
+    title: 'Quase lá! Como você quer receber?',
+    sub: 'Você está adquirindo o Protocolo de Retorno (R$ 47).',
+    prod: 'Protocolo de Retorno',
+    valor: 'R$ 47,00',
+    valorTxt: 'R$ 47,00',
+    valorBig: '<sup>R$</sup>47',
+    pixCode: PIX_CODE,
+    icon: '🔒'
+  },
+  desbloqueio: {
+    title: 'Quase lá! Como você quer receber?',
+    sub: 'Você está adquirindo o Código do Desbloqueio (R$ 12,90).',
+    prod: 'Código do Desbloqueio',
+    valor: 'R$ 12,90',
+    valorTxt: 'R$ 12,90',
+    valorBig: '<sup>R$</sup>12<small style="font-size:.5em;font-weight:600;vertical-align:baseline">,90</small>',
+    pixCode: PIX_CODE_DESBL,
+    icon: '🔓'
+  }
+};
+
+function showStep(id){
+  document.querySelectorAll('.checkout-step').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function openModal(produto){
+  currentProduto = produto;
+  const t = PRODUTOS[produto];
+  document.getElementById('modal-title').textContent = t.title;
+  document.getElementById('modal-subtitle').textContent = t.sub;
+  document.getElementById('produto').value = t.prod;
+  document.getElementById('leadForm').reset();
+  document.getElementById('produto').value = t.prod;
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('submitBtn').textContent = 'Continuar para o pagamento →';
+  const cb = document.getElementById('copyBtn');
+  if(cb){ cb.textContent = 'Copiar Pix'; cb.style.cssText = ''; }
+  showStep('step-data');
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('show');
+}
+
+document.getElementById('modal').addEventListener('click', e => {
+  if(e.target.id === 'modal') closeModal();
+});
+
+function goToPix(e){
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const t = PRODUTOS[currentProduto];
+  currentLead = {
+    nome: (fd.get('nome')||'').trim(),
+    canal: fd.get('canal'),
+    contato: (fd.get('contato')||'').trim(),
+    produto: t.prod,
+    valor: t.valor
+  };
+  document.getElementById('pix-valor-txt').textContent = t.valorTxt;
+  document.getElementById('pix-valor-big').innerHTML = t.valorBig;
+  showStep('step-pix');
+}
+
+function backToData(){
+  showStep('step-data');
+}
+
+function copyPix(){
+  const t = PRODUTOS[currentProduto];
+  const code = t.pixCode;
+  const btn = document.getElementById('copyBtn');
+  const done = () => {
+    btn.textContent = '✓ Copiado!';
+    btn.style.background = 'var(--rose-mid)';
+    setTimeout(() => { btn.textContent = 'Copiar Pix'; btn.style.cssText = ''; }, 2500);
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(code).then(done).catch(() => {
+      fallbackCopy(code); done();
+    });
+  } else {
+    fallbackCopy(code); done();
+  }
+}
+function fallbackCopy(text){
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); } catch(_) {}
+  document.body.removeChild(ta);
+}
+
+async function confirmPaid(){
+  if(!currentLead) return;
+  const t = PRODUTOS[currentProduto];
+
+  document.getElementById('sc-nome').textContent    = currentLead.nome || '—';
+  document.getElementById('sc-contato').textContent = currentLead.contato || '—';
+  document.getElementById('sc-canal').textContent   = currentLead.canal || '—';
+  document.getElementById('sc-produto').textContent = currentLead.produto;
+  document.getElementById('sc-valor').textContent   = currentLead.valor;
+
+  const waMsg = encodeURIComponent(
+    `${t.icon} *Pagamento realizado!*\n\n👤 Nome: ${currentLead.nome}\n📩 ${currentLead.canal}: ${currentLead.contato}\n💳 Valor: ${currentLead.valor} via Pix\n📦 Produto: ${currentLead.produto}\n\nPor favor, confirme meu acesso. 🙏`
+  );
+  document.getElementById('sc-wa-btn').href = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+
+  showStep('step-success');
+
+  try {
+    await fetch('https://formspree.io/f/mreonbkg', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        nome: currentLead.nome,
+        contato: currentLead.contato,
+        canal: currentLead.canal,
+        produto: currentLead.produto,
+        valor: currentLead.valor,
+        pagamento: 'Pix'
+      })
+    });
+  } catch(_){}
+}
+
+document.addEventListener('keydown', e => { if(e.key === 'Escape'){ closeCheckoutPage(); closeModal(); } });
+
+
+const CHECKOUT_TEMPLATE_B64 = 'PCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9InB0LUJSIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCxpbml0aWFsLXNjYWxlPTEuMCxtYXhpbXVtLXNjYWxlPTEuMCx1c2VyLXNjYWxhYmxlPW5vIj4KPHRpdGxlPkNoZWNrb3V0IOKAlCBKb3NpYW5lIE1vbnRlaXJvPC90aXRsZT4KPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tIj4KPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tIiBjcm9zc29yaWdpbj4KPGxpbmsgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1OdW5pdG86d2dodEA0MDA7NTAwOzYwMDs3MDA7ODAwOzkwMCZmYW1pbHk9UGxheWZhaXIrRGlzcGxheTp3Z2h0QDYwMDs3MDAmZGlzcGxheT1zd2FwIiByZWw9InN0eWxlc2hlZXQiPgo8c3R5bGU+CiosOjpiZWZvcmUsOjphZnRlcntib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjA7cGFkZGluZzowfQo6cm9vdHsKICAtLWJyYW5kOiNlMDVjOGE7CiAgLS1icmFuZC1kOiNjNDQ0NmY7CiAgLS1icmFuZC1sOiNmMDhhYjA7CiAgLS1ncmVlbjojMjJjNTVlOwogIC0tZ3JlZW4tZDojMTZhMzRhOwogIC0tZ3JheS01MDojZjlmYWZiOwogIC0tZ3JheS0xMDA6I2YzZjRmNjsKICAtLWdyYXktMjAwOiNlNWU3ZWI7CiAgLS1ncmF5LTMwMDojZDFkNWRiOwogIC0tZ3JheS00MDA6IzljYTNhZjsKICAtLWdyYXktNTAwOiM2YjcyODA7CiAgLS1ncmF5LTcwMDojMzc0MTUxOwogIC0tZ3JheS05MDA6IzExMTgyNzsKICAtLXJlZDojZWY0NDQ0OwogIC0tcmFkaXVzOjhweDsKICAtLXNoYWRvdzowIDFweCAzcHggcmdiYSgwLDAsMCwuMDgpLDAgMXB4IDJweCByZ2JhKDAsMCwwLC4wNik7CiAgLS1zaGFkb3ctbWQ6MCA0cHggMTZweCByZ2JhKDAsMCwwLC4xMCk7Cn0KaHRtbHstd2Via2l0LXRleHQtc2l6ZS1hZGp1c3Q6MTAwJTtzY3JvbGwtYmVoYXZpb3I6c21vb3RofQpib2R5ewogIGZvbnQtZmFtaWx5OidOdW5pdG8nLHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOjE1cHg7CiAgY29sb3I6dmFyKC0tZ3JheS05MDApOwogIGJhY2tncm91bmQ6I2YxZjVmOTsKICBtaW4taGVpZ2h0OjEwMHZoOwogIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6YW50aWFsaWFzZWQ7Cn0KCi8qIOKUgOKUgCBUT1BCQVIg4pSA4pSAICovCi50b3BiYXJ7CiAgYmFja2dyb3VuZDojZmZmOwogIGJvcmRlci1ib3R0b206MXB4IHNvbGlkIHZhcigtLWdyYXktMjAwKTsKICBwYWRkaW5nOjEycHggMTZweDsKICBkaXNwbGF5OmZsZXg7CiAgYWxpZ24taXRlbXM6Y2VudGVyOwogIGp1c3RpZnktY29udGVudDpzcGFjZS1iZXR3ZWVuOwogIHBvc2l0aW9uOnN0aWNreTt0b3A6MDt6LWluZGV4OjUwOwp9Ci50b3BiYXItYnJhbmR7CiAgZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6OHB4OwogIGZvbnQtd2VpZ2h0OjgwMDtmb250LXNpemU6MS4wNXJlbTtjb2xvcjp2YXIoLS1icmFuZCk7CiAgbGV0dGVyLXNwYWNpbmc6LS4wMWVtOwp9Ci50b3BiYXItYnJhbmQgc3Zne3dpZHRoOjIycHg7aGVpZ2h0OjIycHg7ZmlsbDp2YXIoLS1icmFuZCl9Ci50b3BiYXItc2VjdXJlewogIGRpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjVweDsKICBmb250LXNpemU6Ljc1cmVtO2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjp2YXIoLS1ncmF5LTUwMCk7Cn0KLnRvcGJhci1zZWN1cmUgc3Zne3dpZHRoOjE0cHg7aGVpZ2h0OjE0cHg7ZmlsbDp2YXIoLS1ncmF5LTQwMCl9CgovKiDilIDilIAgTEFZT1VUIOKUgOKUgCAqLwoucGFnZXsKICBtYXgtd2lkdGg6NTIwcHg7CiAgbWFyZ2luOjAgYXV0bzsKICBwYWRkaW5nOjIwcHggMTJweCA0MHB4Owp9CgovKiDilIDilIAgUFJPRFVDVCBDQVJEIOKUgOKUgCAqLwoucHJvZHVjdC1jYXJkewogIGJhY2tncm91bmQ6I2ZmZjsKICBib3JkZXItcmFkaXVzOjEycHg7CiAgYm94LXNoYWRvdzp2YXIoLS1zaGFkb3cpOwogIHBhZGRpbmc6MTZweDsKICBkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxNHB4OwogIG1hcmdpbi1ib3R0b206MTZweDsKfQoucHJvZHVjdC10aHVtYnsKICB3aWR0aDo2NHB4O2hlaWdodDo2NHB4O2ZsZXgtc2hyaW5rOjA7CiAgYmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCNmY2U0ZWYsI2Y4YjRjZCk7CiAgYm9yZGVyLXJhZGl1czo4cHg7CiAgZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyOwogIGJvcmRlcjoxcHggc29saWQgdmFyKC0tZ3JheS0yMDApOwogIG92ZXJmbG93OmhpZGRlbjsKfQoucHJvZHVjdC10aHVtYiBpbWd7CiAgd2lkdGg6MTAwJTsKICBoZWlnaHQ6MTAwJTsKICBvYmplY3QtZml0OmNvdmVyOwogIGRpc3BsYXk6YmxvY2s7Cn0KLnByb2R1Y3QtaW5mb3tmbGV4OjE7bWluLXdpZHRoOjB9Ci5wcm9kdWN0LXRpdGxlewogIGZvbnQtc2l6ZTouOTJyZW07Zm9udC13ZWlnaHQ6ODAwO2NvbG9yOnZhcigtLWdyYXktOTAwKTsKICBsaW5lLWhlaWdodDoxLjM7bWFyZ2luLWJvdHRvbTozcHg7Cn0KLnByb2R1Y3QtYXV0aG9ye2ZvbnQtc2l6ZTouNzhyZW07Zm9udC13ZWlnaHQ6NjAwO2NvbG9yOnZhcigtLWdyYXktNTAwKTttYXJnaW4tYm90dG9tOjZweH0KLnByb2R1Y3QtcHJpY2V7CiAgZm9udC1zaXplOjEuNDVyZW07Zm9udC13ZWlnaHQ6OTAwO2NvbG9yOnZhcigtLWdyYXktOTAwKTsKICBsZXR0ZXItc3BhY2luZzotLjAyZW07Cn0KLnByb2R1Y3QtcHJpY2Utb3JpZ2luYWx7CiAgZm9udC1zaXplOi44MnJlbTtmb250LXdlaWdodDo2MDA7Y29sb3I6dmFyKC0tZ3JheS00MDApOwogIHRleHQtZGVjb3JhdGlvbjpsaW5lLXRocm91Z2g7bWFyZ2luLWxlZnQ6NHB4Owp9CgovKiDilIDilIAgU0VDVElPTiBDQVJEIOKUgOKUgCAqLwouc2VjdGlvbi1jYXJkewogIGJhY2tncm91bmQ6I2ZmZjsKICBib3JkZXItcmFkaXVzOjEycHg7CiAgYm94LXNoYWRvdzp2YXIoLS1zaGFkb3cpOwogIHBhZGRpbmc6MjBweCAxNnB4OwogIG1hcmdpbi1ib3R0b206MTZweDsKfQouc2VjdGlvbi10aXRsZXsKICBmb250LXNpemU6Ljc4cmVtO2ZvbnQtd2VpZ2h0OjgwMDsKICBsZXR0ZXItc3BhY2luZzouMDhlbTt0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7CiAgY29sb3I6dmFyKC0tZ3JheS01MDApO21hcmdpbi1ib3R0b206MTZweDsKICBwYWRkaW5nLWJvdHRvbToxMnB4O2JvcmRlci1ib3R0b206MXB4IHNvbGlkIHZhcigtLWdyYXktMTAwKTsKfQoKLyog4pSA4pSAIEZPUk0gRklFTERTIOKUgOKUgCAqLwouZmllbGR7bWFyZ2luLWJvdHRvbToxNHB4fQouZmllbGQ6bGFzdC1jaGlsZHttYXJnaW4tYm90dG9tOjB9Ci5maWVsZCBsYWJlbHsKICBkaXNwbGF5OmJsb2NrOwogIGZvbnQtc2l6ZTouOHJlbTtmb250LXdlaWdodDo3MDA7Y29sb3I6dmFyKC0tZ3JheS03MDApOwogIG1hcmdpbi1ib3R0b206NXB4Owp9Ci5maWVsZCBsYWJlbCAucmVxe2NvbG9yOnZhcigtLWJyYW5kKTttYXJnaW4tbGVmdDoycHh9Ci5maWVsZCBpbnB1dHsKICB3aWR0aDoxMDAlOwogIHBhZGRpbmc6MTFweCAxNHB4OwogIGJvcmRlcjoxLjVweCBzb2xpZCB2YXIoLS1ncmF5LTIwMCk7CiAgYm9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpOwogIGZvbnQtZmFtaWx5OidOdW5pdG8nLHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOi45NXJlbTtmb250LXdlaWdodDo2MDA7CiAgY29sb3I6dmFyKC0tZ3JheS05MDApOwogIGJhY2tncm91bmQ6I2ZmZjsKICBvdXRsaW5lOm5vbmU7CiAgdHJhbnNpdGlvbjpib3JkZXItY29sb3IgLjJzLGJveC1zaGFkb3cgLjJzOwogIC13ZWJraXQtYXBwZWFyYW5jZTpub25lOwp9Ci5maWVsZCBpbnB1dDpmb2N1c3sKICBib3JkZXItY29sb3I6dmFyKC0tYnJhbmQpOwogIGJveC1zaGFkb3c6MCAwIDAgM3B4IHJnYmEoMjI0LDkyLDEzOCwuMTIpOwp9Ci5maWVsZCBpbnB1dDo6cGxhY2Vob2xkZXJ7Y29sb3I6dmFyKC0tZ3JheS00MDApO2ZvbnQtd2VpZ2h0OjUwMH0KLmZpZWxkIC5maWVsZC1lcnJvcnsKICBmb250LXNpemU6Ljc1cmVtO2ZvbnQtd2VpZ2h0OjcwMDtjb2xvcjp2YXIoLS1yZWQpOwogIG1hcmdpbi10b3A6NHB4O2Rpc3BsYXk6bm9uZTsKfQouZmllbGQuaGFzLWVycm9yIGlucHV0e2JvcmRlci1jb2xvcjp2YXIoLS1yZWQpfQouZmllbGQuaGFzLWVycm9yIC5maWVsZC1lcnJvcntkaXNwbGF5OmJsb2NrfQoKLyogcGhvbmUgcm93ICovCi5waG9uZS1yb3d7ZGlzcGxheTpmbGV4O2dhcDo4cHh9Ci5waG9uZS1kZGl7CiAgd2lkdGg6ODBweDtmbGV4LXNocmluazowOwogIHBhZGRpbmc6MTFweCAxMHB4OwogIGJvcmRlcjoxLjVweCBzb2xpZCB2YXIoLS1ncmF5LTIwMCk7CiAgYm9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpOwogIGZvbnQtZmFtaWx5OidOdW5pdG8nLHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOi45cmVtO2ZvbnQtd2VpZ2h0OjcwMDsKICBjb2xvcjp2YXIoLS1ncmF5LTcwMCk7CiAgYmFja2dyb3VuZDojZmZmOwogIC13ZWJraXQtYXBwZWFyYW5jZTpub25lOwogIG91dGxpbmU6bm9uZTsKICBjdXJzb3I6cG9pbnRlcjsKfQoucGhvbmUtaW5wdXR7ZmxleDoxfQoKLyog4pSA4pSAIFBBWU1FTlQgU0VDVElPTiDilIDilIAgKi8KLnBheW1lbnQtb3B0aW9uewogIGJvcmRlcjoycHggc29saWQgdmFyKC0tZ3JheS0yMDApOwogIGJvcmRlci1yYWRpdXM6MTBweDsKICBwYWRkaW5nOjE0cHggMTZweDsKICBkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxMnB4OwogIGN1cnNvcjpwb2ludGVyOwogIHRyYW5zaXRpb246Ym9yZGVyLWNvbG9yIC4ycyxiYWNrZ3JvdW5kIC4yczsKfQoucGF5bWVudC1vcHRpb24uc2VsZWN0ZWR7CiAgYm9yZGVyLWNvbG9yOnZhcigtLWJyYW5kKTsKICBiYWNrZ3JvdW5kOnJnYmEoMjI0LDkyLDEzOCwuMDQpOwp9Ci5wYXltZW50LXJhZGlvewogIHdpZHRoOjIwcHg7aGVpZ2h0OjIwcHg7ZmxleC1zaHJpbms6MDsKICBib3JkZXI6MnB4IHNvbGlkIHZhcigtLWdyYXktMzAwKTsKICBib3JkZXItcmFkaXVzOjUwJTsKICBkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7CiAgdHJhbnNpdGlvbjpib3JkZXItY29sb3IgLjJzOwp9Ci5wYXltZW50LW9wdGlvbi5zZWxlY3RlZCAucGF5bWVudC1yYWRpb3tib3JkZXItY29sb3I6dmFyKC0tYnJhbmQpfQoucGF5bWVudC1yYWRpby1kb3R7CiAgd2lkdGg6MTBweDtoZWlnaHQ6MTBweDtib3JkZXItcmFkaXVzOjUwJTsKICBiYWNrZ3JvdW5kOnZhcigtLWJyYW5kKTsKICBkaXNwbGF5Om5vbmU7Cn0KLnBheW1lbnQtb3B0aW9uLnNlbGVjdGVkIC5wYXltZW50LXJhZGlvLWRvdHtkaXNwbGF5OmJsb2NrfQoucGF5bWVudC1sYWJlbHsKICBmb250LXNpemU6LjkycmVtO2ZvbnQtd2VpZ2h0OjcwMDtjb2xvcjp2YXIoLS1ncmF5LTcwMCk7CiAgZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6OHB4Owp9Ci5waXgtaWNvbnsKICB3aWR0aDoyOHB4O2hlaWdodDoyOHB4OwogIGJhY2tncm91bmQ6IzMyYmNhZDtib3JkZXItcmFkaXVzOjVweDsKICBkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Cn0KLnBpeC1pY29uIHN2Z3t3aWR0aDoxOHB4O2hlaWdodDoxOHB4O2ZpbGw6I2ZmZn0KCi8qIOKUgOKUgCBQSVggUEFORUwg4pSA4pSAICovCi5waXgtcGFuZWx7CiAgbWFyZ2luLXRvcDoxNHB4OwogIGJhY2tncm91bmQ6dmFyKC0tZ3JheS01MCk7CiAgYm9yZGVyOjFweCBzb2xpZCB2YXIoLS1ncmF5LTIwMCk7CiAgYm9yZGVyLXJhZGl1czoxMHB4OwogIHBhZGRpbmc6MTZweDsKICBkaXNwbGF5Om5vbmU7Cn0KLnBpeC1wYW5lbC5zaG93e2Rpc3BsYXk6YmxvY2t9CgoucGl4LWNvZGUtYm94ewogIGJhY2tncm91bmQ6I2ZmZjsKICBib3JkZXI6MS41cHggc29saWQgdmFyKC0tZ3JheS0yMDApOwogIGJvcmRlci1yYWRpdXM6OHB4OwogIHBhZGRpbmc6MTJweCAxNHB4OwogIGRpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjEwcHg7CiAgbWFyZ2luLWJvdHRvbToxMnB4Owp9Ci5waXgtY29kZS10ZXh0ewogIGZsZXg6MTsKICBmb250LXNpemU6LjcycmVtO2ZvbnQtd2VpZ2h0OjcwMDsKICBjb2xvcjp2YXIoLS1ncmF5LTUwMCk7CiAgd29yZC1icmVhazpicmVhay1hbGw7CiAgbGluZS1oZWlnaHQ6MS40OwogIGZvbnQtZmFtaWx5Om1vbm9zcGFjZTsKfQoKLyog4pSA4pSAIEJVVFRPTlMg4pSA4pSAICovCi5idG4tcHJpbWFyeXsKICB3aWR0aDoxMDAlOwogIHBhZGRpbmc6MTVweCAyNHB4OwogIGJhY2tncm91bmQ6bGluZWFyLWdyYWRpZW50KDEzNWRlZyx2YXIoLS1icmFuZCksdmFyKC0tYnJhbmQtZCkpOwogIGNvbG9yOiNmZmY7CiAgZm9udC1mYW1pbHk6J051bml0bycsc2Fucy1zZXJpZjsKICBmb250LXNpemU6MXJlbTtmb250LXdlaWdodDo4MDA7CiAgYm9yZGVyOm5vbmU7Ym9yZGVyLXJhZGl1czoxMHB4OwogIGN1cnNvcjpwb2ludGVyOwogIGxldHRlci1zcGFjaW5nOi4wMWVtOwogIGJveC1zaGFkb3c6MCA0cHggMTRweCByZ2JhKDIyNCw5MiwxMzgsLjM1KTsKICB0cmFuc2l0aW9uOm9wYWNpdHkgLjJzLHRyYW5zZm9ybSAuMTVzLGJveC1zaGFkb3cgLjJzOwogIGRpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtnYXA6OHB4Owp9Ci5idG4tcHJpbWFyeTpob3ZlcntvcGFjaXR5Oi45Mzt0cmFuc2Zvcm06dHJhbnNsYXRlWSgtMXB4KTtib3gtc2hhZG93OjAgNnB4IDIwcHggcmdiYSgyMjQsOTIsMTM4LC40KX0KLmJ0bi1wcmltYXJ5OmFjdGl2ZXt0cmFuc2Zvcm06c2NhbGUoLjk4KX0KLmJ0bi1wcmltYXJ5OmRpc2FibGVke29wYWNpdHk6LjU1O2N1cnNvcjpub3QtYWxsb3dlZDt0cmFuc2Zvcm06bm9uZTtib3gtc2hhZG93Om5vbmV9CgouYnRuLXBpeHsKICB3aWR0aDoxMDAlOwogIHBhZGRpbmc6MTRweCAyNHB4OwogIGJhY2tncm91bmQ6I2ZmZjsKICBjb2xvcjp2YXIoLS1ncmF5LTcwMCk7CiAgZm9udC1mYW1pbHk6J051bml0bycsc2Fucy1zZXJpZjsKICBmb250LXNpemU6Ljk1cmVtO2ZvbnQtd2VpZ2h0OjgwMDsKICBib3JkZXI6MnB4IHNvbGlkIHZhcigtLWdyYXktMzAwKTsKICBib3JkZXItcmFkaXVzOjEwcHg7CiAgY3Vyc29yOnBvaW50ZXI7CiAgdHJhbnNpdGlvbjphbGwgLjI1czsKICBkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Z2FwOjhweDsKfQouYnRuLXBpeC5sb2FkaW5newogIGJvcmRlci1jb2xvcjp2YXIoLS1icmFuZC1sKTsKICBjb2xvcjp2YXIoLS1icmFuZCk7CiAgYmFja2dyb3VuZDpyZ2JhKDIyNCw5MiwxMzgsLjA0KTsKfQouYnRuLXBpeC5yZWFkeXsKICBiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCgxMzVkZWcsdmFyKC0tZ3JlZW4pLHZhcigtLWdyZWVuLWQpKTsKICBjb2xvcjojZmZmOwogIGJvcmRlci1jb2xvcjp0cmFuc3BhcmVudDsKICBib3gtc2hhZG93OjAgNHB4IDE0cHggcmdiYSgzNCwxOTcsOTQsLjMpOwp9Ci5idG4tcGl4LnJlYWR5OmhvdmVye29wYWNpdHk6LjkzO3RyYW5zZm9ybTp0cmFuc2xhdGVZKC0xcHgpfQouYnRuLXBpeC5jb3BpZWR7CiAgYmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCMxNmEzNGEsIzE1ODAzZCk7CiAgY29sb3I6I2ZmZjsKICBib3JkZXItY29sb3I6dHJhbnNwYXJlbnQ7Cn0KCi8qIHNwaW5uZXIgKi8KLnNwaW5uZXJ7CiAgd2lkdGg6MTZweDtoZWlnaHQ6MTZweDsKICBib3JkZXI6MnB4IHNvbGlkIHJnYmEoMjI0LDkyLDEzOCwuMyk7CiAgYm9yZGVyLXRvcC1jb2xvcjp2YXIoLS1icmFuZCk7CiAgYm9yZGVyLXJhZGl1czo1MCU7CiAgYW5pbWF0aW9uOnNwaW4gLjdzIGxpbmVhciBpbmZpbml0ZTsKICBkaXNwbGF5Om5vbmU7Cn0KLmJ0bi1waXgubG9hZGluZyAuc3Bpbm5lcntkaXNwbGF5OmJsb2NrfQpAa2V5ZnJhbWVzIHNwaW57dG97dHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpfX0KCi8qIOKUgOKUgCBTVUNDRVNTIEJBTk5FUiDilIDilIAgKi8KLnN1Y2Nlc3MtYmFubmVyewogIGRpc3BsYXk6bm9uZTsKICBiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCgxMzVkZWcsI2YwZmRmNCwjZGNmY2U3KTsKICBib3JkZXI6MS41cHggc29saWQgIzg2ZWZhYzsKICBib3JkZXItcmFkaXVzOjEycHg7CiAgcGFkZGluZzoyMHB4IDE4cHg7CiAgdGV4dC1hbGlnbjpjZW50ZXI7CiAgbWFyZ2luLXRvcDoxNnB4Owp9Ci5zdWNjZXNzLWJhbm5lci5zaG93e2Rpc3BsYXk6YmxvY2s7YW5pbWF0aW9uOmZhZGVVcCAuNHMgZWFzZX0KQGtleWZyYW1lcyBmYWRlVXB7ZnJvbXtvcGFjaXR5OjA7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoOHB4KX10b3tvcGFjaXR5OjE7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoMCl9fQouc3VjY2Vzcy1pY29uLWJpZ3tmb250LXNpemU6Mi41cmVtO21hcmdpbi1ib3R0b206MTBweH0KLnN1Y2Nlc3MtdGl0bGV7CiAgZm9udC1zaXplOjEuMXJlbTtmb250LXdlaWdodDo5MDA7Y29sb3I6IzE2NjUzNDsKICBtYXJnaW4tYm90dG9tOjZweDsKfQouc3VjY2Vzcy1tc2d7CiAgZm9udC1zaXplOi44OHJlbTtmb250LXdlaWdodDo2MDA7Y29sb3I6IzE1ODAzZDsKICBsaW5lLWhlaWdodDoxLjY7Cn0KLnN1Y2Nlc3MtZGV0YWlsewogIG1hcmdpbi10b3A6MTRweDsKICBiYWNrZ3JvdW5kOiNmZmY7CiAgYm9yZGVyLXJhZGl1czo4cHg7CiAgcGFkZGluZzoxMnB4IDE0cHg7CiAgYm9yZGVyOjFweCBzb2xpZCAjYmJmN2QwOwogIHRleHQtYWxpZ246bGVmdDsKfQouc3VjY2Vzcy1kZXRhaWwtcm93ewogIGRpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsKICBmb250LXNpemU6LjgycmVtO2ZvbnQtd2VpZ2h0OjcwMDsKICBjb2xvcjp2YXIoLS1ncmF5LTcwMCk7CiAgcGFkZGluZzozcHggMDsKfQouc3VjY2Vzcy1kZXRhaWwtcm93IHNwYW46bGFzdC1jaGlsZHtjb2xvcjp2YXIoLS1ncmF5LTUwMCk7Zm9udC13ZWlnaHQ6NjAwfQoKLyog4pSA4pSAIE9SREVSIFNVTU1BUlkg4pSA4pSAICovCi5vcmRlci1zdW1tYXJ5ewogIGJhY2tncm91bmQ6I2ZmZjsKICBib3JkZXItcmFkaXVzOjEycHg7CiAgYm94LXNoYWRvdzp2YXIoLS1zaGFkb3cpOwogIHBhZGRpbmc6MTZweDsKICBtYXJnaW4tYm90dG9tOjE2cHg7Cn0KLm9yZGVyLXJvd3sKICBkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47YWxpZ24taXRlbXM6Y2VudGVyOwogIGZvbnQtc2l6ZTouODhyZW07Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOnZhcigtLWdyYXktNzAwKTsKICBwYWRkaW5nOjZweCAwOwp9Ci5vcmRlci1yb3c6bm90KDpsYXN0LWNoaWxkKXtib3JkZXItYm90dG9tOjFweCBzb2xpZCB2YXIoLS1ncmF5LTEwMCl9Ci5vcmRlci10b3RhbHsKICBmb250LXNpemU6MXJlbTtmb250LXdlaWdodDo5MDA7Y29sb3I6dmFyKC0tZ3JheS05MDApOwp9Ci5vcmRlci10b3RhbC12YWx7Y29sb3I6dmFyKC0tYnJhbmQpO2ZvbnQtc2l6ZToxLjFyZW19CgovKiDilIDilIAgRk9PVEVSIOKUgOKUgCAqLwouY2hlY2tvdXQtZm9vdGVyewogIHRleHQtYWxpZ246Y2VudGVyOwogIHBhZGRpbmctdG9wOjhweDsKfQouY2hlY2tvdXQtZm9vdGVyIHB7CiAgZm9udC1zaXplOi43M3JlbTtmb250LXdlaWdodDo2MDA7Y29sb3I6dmFyKC0tZ3JheS00MDApOwogIGRpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtnYXA6NXB4Owp9Ci5jaGVja291dC1mb290ZXIgc3Zne3dpZHRoOjEycHg7aGVpZ2h0OjEycHg7ZmlsbDp2YXIoLS1ncmF5LTMwMCl9CgovKiDilIDilIAgU0VMRUNUT1IgREUgUFJPRFVUTyAoc2UgdmllciBkZSBsaW5rcyBkaWZlcmVudGVzKSDilIDilIAgKi8KLyogSGlkZGVuIOKAlCBwcm9kdXRvIMOpIGZpeG8gcG9yIFVSTCBwYXJhbSAqLwoKLyogbW9iaWxlIHBvbGlzaCAqLwpAbWVkaWEobWF4LXdpZHRoOjQ4MHB4KXsKICAucGFnZXtwYWRkaW5nOjE0cHggOHB4IDQwcHh9CiAgLnByb2R1Y3QtY2FyZCwuc2VjdGlvbi1jYXJkLC5vcmRlci1zdW1tYXJ5e2JvcmRlci1yYWRpdXM6MTBweH0KfQo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5PgoKPCEtLSBUT1BCQVIgLS0+CjxoZWFkZXIgY2xhc3M9InRvcGJhciI+CiAgPGRpdiBjbGFzcz0idG9wYmFyLWJyYW5kIj4KICAgIDxzdmcgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptLTEgMTRIOVY4aDJ2OHptNCAwaC0yVjhoMnY4eiIvPjwvc3ZnPgogICAgQ2hlY2tvdXQKICA8L2Rpdj4KICA8ZGl2IGNsYXNzPSJ0b3BiYXItc2VjdXJlIj4KICAgIDxzdmcgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMUwzIDV2NmMwIDUuNTUgMy44NCAxMC43NCA5IDEyIDUuMTYtMS4yNiA5LTYuNDUgOS0xMlY1bC05LTR6Ii8+PC9zdmc+CiAgICBBbWJpZW50ZSBzZWd1cm8KICA8L2Rpdj4KPC9oZWFkZXI+Cgo8ZGl2IGNsYXNzPSJwYWdlIj4KCiAgPCEtLSBQUk9EVUNUIENBUkQgLS0+CiAgPGRpdiBjbGFzcz0icHJvZHVjdC1jYXJkIiBpZD0icHJvZHVjdC1jYXJkIj4KICAgIDxkaXYgY2xhc3M9InByb2R1Y3QtdGh1bWIiIGlkPSJwcm9kdWN0LXRodW1iIj48aW1nIGlkPSJwcm9kdWN0LWltYWdlIiBzcmM9ImltZy9wcm9kdXRvLmpwZyIgYWx0PSJQcm90b2NvbG8gZGUgUmV0b3JubyI+PC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJwcm9kdWN0LWluZm8iPgogICAgICA8ZGl2IGNsYXNzPSJwcm9kdWN0LXRpdGxlIiBpZD0icHJvZHVjdC10aXRsZSI+UHJvdG9jb2xvIGRlIFJldG9ybm88L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0icHJvZHVjdC1hdXRob3IiPkF1dG9yOiBKb3NpYW5lIE1vbnRlaXJvPC9kaXY+CiAgICAgIDxkaXY+CiAgICAgICAgPHNwYW4gY2xhc3M9InByb2R1Y3QtcHJpY2UiIGlkPSJwcm9kdWN0LXByaWNlIj5SJCA0NywwMDwvc3Bhbj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2Rpdj4KCiAgPCEtLSBEQURPUyBQRVNTT0FJUyAtLT4KICA8ZGl2IGNsYXNzPSJzZWN0aW9uLWNhcmQiPgogICAgPGRpdiBjbGFzcz0ic2VjdGlvbi10aXRsZSI+RGFkb3MgcGVzc29haXM8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJmaWVsZCIgaWQ9ImYtZW1haWwiPgogICAgICA8bGFiZWw+U2V1IGUtbWFpbCA8c3BhbiBjbGFzcz0icmVxIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgaWQ9ImVtYWlsIiBwbGFjZWhvbGRlcj0iRGlnaXRlIHNldSBlLW1haWwgcGFyYSByZWNlYmVyIGEgY29tcHJhIiBhdXRvY29tcGxldGU9ImVtYWlsIiBpbnB1dG1vZGU9ImVtYWlsIj4KICAgICAgPGRpdiBjbGFzcz0iZmllbGQtZXJyb3IiPkUtbWFpbCBpbnbDoWxpZG88L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9ImZpZWxkIiBpZD0iZi1lbWFpbDIiPgogICAgICA8bGFiZWw+Q29uZmlybWUgc2V1IGUtbWFpbCA8c3BhbiBjbGFzcz0icmVxIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgaWQ9ImVtYWlsMiIgcGxhY2Vob2xkZXI9IkRpZ2l0ZSBub3ZhbWVudGUgc2V1IGUtbWFpbCIgYXV0b2NvbXBsZXRlPSJvZmYiPgogICAgICA8ZGl2IGNsYXNzPSJmaWVsZC1lcnJvciI+T3MgZS1tYWlscyBuw6NvIGNvaW5jaWRlbTwvZGl2PgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0iZmllbGQiIGlkPSJmLW5vbWUiPgogICAgICA8bGFiZWw+Tm9tZSBjb21wbGV0byA8c3BhbiBjbGFzcz0icmVxIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibm9tZSIgcGxhY2Vob2xkZXI9IkRpZ2l0ZSBzZXUgbm9tZSBjb21wbGV0byIgYXV0b2NvbXBsZXRlPSJuYW1lIj4KICAgICAgPGRpdiBjbGFzcz0iZmllbGQtZXJyb3IiPkluZm9ybWUgc2V1IG5vbWU8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9ImZpZWxkIiBpZD0iZi1jZWwiPgogICAgICA8bGFiZWw+Q2VsdWxhciA8c3BhbiBjbGFzcz0icmVxIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxkaXYgY2xhc3M9InBob25lLXJvdyI+CiAgICAgICAgPHNlbGVjdCBjbGFzcz0icGhvbmUtZGRpIiBpZD0iZGRpIj4KICAgICAgICAgIDxvcHRpb24gdmFsdWU9Iis1NSI+8J+Hp/Cfh7cgKzU1PC9vcHRpb24+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSIrMzUxIj7wn4e18J+HuSArMzUxPC9vcHRpb24+CiAgICAgICAgICA8b3B0aW9uIHZhbHVlPSIrMSI+8J+HuvCfh7ggKzE8L29wdGlvbj4KICAgICAgICA8L3NlbGVjdD4KICAgICAgICA8aW5wdXQgdHlwZT0idGVsIiBpZD0iY2VsIiBjbGFzcz0icGhvbmUtaW5wdXQiIHBsYWNlaG9sZGVyPSIoMDApIDAwMDAwLTAwMDAiIGF1dG9jb21wbGV0ZT0idGVsIiBpbnB1dG1vZGU9Im51bWVyaWMiPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iZmllbGQtZXJyb3IiPkluZm9ybWUgdW0gY2VsdWxhciB2w6FsaWRvPC9kaXY+CiAgICA8L2Rpdj4KICA8L2Rpdj4KCiAgPCEtLSBQQUdBTUVOVE8gLS0+CiAgPGRpdiBjbGFzcz0ic2VjdGlvbi1jYXJkIj4KICAgIDxkaXYgY2xhc3M9InNlY3Rpb24tdGl0bGUiPkZvcm1hIGRlIHBhZ2FtZW50bzwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InBheW1lbnQtb3B0aW9uIHNlbGVjdGVkIj4KICAgICAgPGRpdiBjbGFzcz0icGF5bWVudC1yYWRpbyI+PGRpdiBjbGFzcz0icGF5bWVudC1yYWRpby1kb3QiPjwvZGl2PjwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJwYXltZW50LWxhYmVsIj4KICAgICAgICBQSVgKICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8IS0tIFBJWCBQQU5FTCAtLT4KICAgIDxkaXYgY2xhc3M9InBpeC1wYW5lbCBzaG93IiBpZD0icGl4LXBhbmVsIj4KICAgICAgPCEtLSBFc3RhZG8gaW5pY2lhbDogYm90w6NvIGRlIGdlcmFyIC0tPgogICAgICA8ZGl2IGlkPSJwaXgtZ2VuZXJhdGUtYXJlYSI+CiAgICAgICAgPHAgc3R5bGU9ImZvbnQtc2l6ZTouODNyZW07Zm9udC13ZWlnaHQ6NjAwO2NvbG9yOnZhcigtLWdyYXktNTAwKTttYXJnaW4tYm90dG9tOjEycHg7bGluZS1oZWlnaHQ6MS41Ij4KICAgICAgICAgIENsaXF1ZSBubyBib3TDo28gYWJhaXhvIHBhcmEgZ2VyYXIgc2V1IGPDs2RpZ28gUGl4LiBBcMOzcyBvIHBhZ2FtZW50bywgdm9jw6ogcmVjZWJlcsOhIG8gYWNlc3NvIGF1dG9tYXRpY2FtZW50ZS4KICAgICAgICA8L3A+CiAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJidG4tcGl4IiBpZD0iYnRuLWdlcmFyIiBvbmNsaWNrPSJnZXJhclBpeCgpIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJzcGlubmVyIj48L3NwYW4+CiAgICAgICAgICA8c3BhbiBpZD0iYnRuLWdlcmFyLXR4dCI+8J+UkSBHZXJhciBjw7NkaWdvIFBpeDwvc3Bhbj4KICAgICAgICA8L2J1dHRvbj4KICAgICAgPC9kaXY+CgogICAgICA8IS0tIEVzdGFkbyBkZXBvaXMgZGUgZ2VyYXI6IGPDs2RpZ28gKyBjb3BpYXIgLS0+CiAgICAgIDxkaXYgaWQ9InBpeC1jb2RlLWFyZWEiIHN0eWxlPSJkaXNwbGF5Om5vbmUiPgogICAgICAgIDxkaXYgY2xhc3M9InBpeC1jb2RlLWJveCIgaWQ9InBpeC1jb2RlLWJveCI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJwaXgtY29kZS10ZXh0IiBpZD0icGl4LWNvZGUtZGlzcGxheSI+PC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJidG4tcGl4IHJlYWR5IiBpZD0iYnRuLWNvcGlhciIgb25jbGljaz0iY29waWFyUGl4KCkiPgogICAgICAgICAgPHNwYW4gaWQ9ImJ0bi1jb3BpYXItdHh0Ij7wn5OLIENvcGlhciBjw7NkaWdvIFBpeDwvc3Bhbj4KICAgICAgICA8L2J1dHRvbj4KICAgICAgICA8cCBpZD0icGl4LWFmdGVyLWNvcHkiIHN0eWxlPSJkaXNwbGF5Om5vbmU7bWFyZ2luLXRvcDoxMnB4O2ZvbnQtc2l6ZTouODJyZW07Zm9udC13ZWlnaHQ6NzAwO2NvbG9yOnZhcigtLWdyYXktNTAwKTt0ZXh0LWFsaWduOmNlbnRlcjtsaW5lLWhlaWdodDoxLjU1Ij4KICAgICAgICAgIEFicmEgbyBhcHAgZG8gc2V1IGJhbmNvIOKGkiBQaXgg4oaSIFBhZ2FyIGNvbSBjw7NkaWdvIFBpeCDihpIgQ29sZSBvIGPDs2RpZ28gYWNpbWEuCiAgICAgICAgPC9wPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvZGl2PgoKICA8IS0tIFJFU1VNTyBETyBQRURJRE8gLS0+CiAgPGRpdiBjbGFzcz0ib3JkZXItc3VtbWFyeSIgaWQ9Im9yZGVyLXN1bW1hcnkiPgogICAgPGRpdiBjbGFzcz0ib3JkZXItcm93Ij4KICAgICAgPHNwYW4gaWQ9InN1bW1hcnktcHJvZCI+UHJvdG9jb2xvIGRlIFJldG9ybm88L3NwYW4+CiAgICAgIDxzcGFuIGlkPSJzdW1tYXJ5LXZhbCI+UiQgNDcsMDA8L3NwYW4+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9Im9yZGVyLXJvdyIgc3R5bGU9InBhZGRpbmctdG9wOjhweDttYXJnaW4tdG9wOjJweCI+CiAgICAgIDxzcGFuIGNsYXNzPSJvcmRlci10b3RhbCI+VG90YWw8L3NwYW4+CiAgICAgIDxzcGFuIGNsYXNzPSJvcmRlci10b3RhbC12YWwiIGlkPSJzdW1tYXJ5LXRvdGFsIj5SJCA0NywwMDwvc3Bhbj4KICAgIDwvZGl2PgogIDwvZGl2PgoKICA8IS0tIEJBTk5FUiBERSBTVUNFU1NPIC0tPgogIDxkaXYgY2xhc3M9InN1Y2Nlc3MtYmFubmVyIiBpZD0ic3VjY2Vzcy1iYW5uZXIiPgogICAgPGRpdiBjbGFzcz0ic3VjY2Vzcy1pY29uLWJpZyI+4pyFPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJzdWNjZXNzLXRpdGxlIj5QZWRpZG8gcmVjZWJpZG8gY29tIHN1Y2Vzc28hPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJzdWNjZXNzLW1zZyI+CiAgICAgIEFww7NzIGEgY29uZmlybWHDp8OjbyBkbyBwYWdhbWVudG8sIHZvY8OqIHJlY2ViZXLDoSBvIGFjZXNzbyBhbyBtYXRlcmlhbCBubyBlLW1haWwgY2FkYXN0cmFkbyBlbSBhdMOpIGFsZ3VucyBtaW51dG9zLgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJzdWNjZXNzLWRldGFpbCIgaWQ9InN1Y2Nlc3MtZGV0YWlsIj4KICAgICAgPGRpdiBjbGFzcz0ic3VjY2Vzcy1kZXRhaWwtcm93Ij48c3Bhbj5Qcm9kdXRvPC9zcGFuPjxzcGFuIGlkPSJzZC1wcm9kIj7igJQ8L3NwYW4+PC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9InN1Y2Nlc3MtZGV0YWlsLXJvdyI+PHNwYW4+VmFsb3I8L3NwYW4+PHNwYW4gaWQ9InNkLXZhbCI+4oCUPC9zcGFuPjwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJzdWNjZXNzLWRldGFpbC1yb3ciPjxzcGFuPkUtbWFpbDwvc3Bhbj48c3BhbiBpZD0ic2QtZW1haWwiPuKAlDwvc3Bhbj48L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ic3VjY2Vzcy1kZXRhaWwtcm93Ij48c3Bhbj5QYWdhbWVudG88L3NwYW4+PHNwYW4+UGl4PC9zcGFuPjwvZGl2PgogICAgPC9kaXY+CiAgPC9kaXY+CgogIDwhLS0gRk9PVEVSIC0tPgogIDxkaXYgY2xhc3M9ImNoZWNrb3V0LWZvb3RlciI+CiAgICA8cD4KICAgICAgPHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4KICAgICAgUGFnYW1lbnRvIDEwMCUgc2VndXJvIMK3IENyaXB0b2dyYWZpYSBTU0wKICAgIDwvcD4KICA8L2Rpdj4KCjwvZGl2PgoKPHNjcmlwdD4KLy8g4pSA4pSAIENPTkZJR1VSQcOHw4NPIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApjb25zdCBGT1JNU1BSRUUgICA9ICdodHRwczovL2Zvcm1zcHJlZS5pby9mL21yZW9uYmtnJzsKCmNvbnN0IFBST0RVVE9TID0gewogIHByb3RvY29sbzogewogICAgbm9tZTogICAgJ1Byb3RvY29sbyBkZSBSZXRvcm5vJywKICAgIGF1dG9yOiAgICdKb3NpYW5lIE1vbnRlaXJvJywKICAgIHZhbG9yOiAgICdSJCA0NywwMCcsCiAgICBpbWFnZW06ICAnaW1nL3Byb2R1dG8uanBnJywKICAgIHBpeDogICAgICcwMDAyMDEyNjU4MDAxNEJSLkdPVi5CQ0IuUElYMDEzNjU2NzZiM2ZlLTVmZGMtNDJmOC05MjJkLTViNDlhZGJmYjc4YzUyMDQwMDAwNTMwMzk4NjU0MDU0Ny4wMDU4MDJCUjU5MjVKb3NpYW5lIE1vbnRlaXJvIGRlIE9saXZlNjAwOVNBTyBQQVVMTzYyMTQwNTEwS3RWZU1DOXN0dDYzMDRDMUI0JwogIH0sCiAgZGVzYmxvcXVlaW86IHsKICAgIG5vbWU6ICAgICdDw7NkaWdvIGRvIERlc2Jsb3F1ZWlvJywKICAgIGF1dG9yOiAgICdKb3NpYW5lIE1vbnRlaXJvJywKICAgIHZhbG9yOiAgICdSJCAxMiw5MCcsCiAgICBpbWFnZW06ICAnaW1nL3Byb2R1dG8uanBnJywKICAgIHBpeDogICAgICcwMDAyMDEyNjU4MDAxNEJSLkdPVi5CQ0IuUElYMDEzNjU2NzZiM2ZlLTVmZGMtNDJmOC05MjJkLTViNDlhZGJmYjc4YzUyMDQwMDAwNTMwMzk4NjU0MDUxMi45MDU4MDJCUjU5MjVKb3NpYW5lIE1vbnRlaXJvIGRlIE9saXZlNjAwOVNBTyBQQVVMTzYyMTQwNTEwc3JaVFdldjhJZDYzMDRDMkMyJwogIH0KfTsKCi8vIERldGVjdGFyIHByb2R1dG8gcGVsYSBVUkw6ID9wPWRlc2Jsb3F1ZWlvICAocGFkcsOjbzogcHJvdG9jb2xvKQpjb25zdCByZXF1ZXN0ZWRQcm9kID0gd2luZG93Ll9fQ0hFQ0tPVVRfUFJPRFVDVF9fIHx8IG5ldyBVUkxTZWFyY2hQYXJhbXMobG9jYXRpb24uc2VhcmNoKS5nZXQoJ3AnKTsKY29uc3QgcHJvZEtleSA9IFBST0RVVE9TW3JlcXVlc3RlZFByb2RdID8gcmVxdWVzdGVkUHJvZCA6ICdwcm90b2NvbG8nOwpjb25zdCBwcm9kICAgID0gUFJPRFVUT1NbcHJvZEtleV07CgovLyBQcmVlbmNoZXIgVUkgY29tIHByb2R1dG8gY29ycmV0bwpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncHJvZHVjdC1pbWFnZScpLnNyYyAgICAgICAgID0gcHJvZC5pbWFnZW07CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwcm9kdWN0LWltYWdlJykuYWx0ICAgICAgICAgPSBwcm9kLm5vbWU7CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwcm9kdWN0LXRpdGxlJykudGV4dENvbnRlbnQgID0gcHJvZC5ub21lOwpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncHJvZHVjdC1wcmljZScpLnRleHRDb250ZW50ICA9IHByb2QudmFsb3I7CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzdW1tYXJ5LXByb2QnKS50ZXh0Q29udGVudCAgID0gcHJvZC5ub21lOwpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3VtbWFyeS12YWwnKS50ZXh0Q29udGVudCAgICA9IHByb2QudmFsb3I7CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzdW1tYXJ5LXRvdGFsJykudGV4dENvbnRlbnQgID0gcHJvZC52YWxvcjsKZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3NkLXByb2QnKS50ZXh0Q29udGVudCAgICAgICAgPSBwcm9kLm5vbWU7CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzZC12YWwnKS50ZXh0Q29udGVudCAgICAgICAgID0gcHJvZC52YWxvcjsKZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3BpeC1jb2RlLWRpc3BsYXknKS50ZXh0Q29udGVudCA9IHByb2QucGl4OwoKLy8g4pSA4pSAIFZBTElEQcOHw4NPIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApmdW5jdGlvbiBzZXRFcnJvcihmaWVsZElkLCBzaG93KXsKICBjb25zdCBlbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGZpZWxkSWQpOwogIGVsLmNsYXNzTGlzdC50b2dnbGUoJ2hhcy1lcnJvcicsIHNob3cpOwp9CgpmdW5jdGlvbiB2YWxpZGFyRW1haWwodil7IHJldHVybiAvXlteXHNAXStAW15cc0BdK1wuW15cc0BdKyQvLnRlc3Qodi50cmltKCkpIH0KZnVuY3Rpb24gbWFzY2FyYVRlbCh2KXsKICB2ID0gdi5yZXBsYWNlKC9cRC9nLCcnKTsKICBpZih2Lmxlbmd0aDw9MTApIHYgPSB2LnJlcGxhY2UoLyhcZHsyfSkoXGR7NH0pKFxkezAsNH0pLywnKCQxKSAkMi0kMycpOwogIGVsc2UgICAgICAgICAgICAgdiA9IHYucmVwbGFjZSgvKFxkezJ9KShcZHs1fSkoXGR7MCw0fSkvLCcoJDEpICQyLSQzJyk7CiAgcmV0dXJuIHY7Cn0KZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NlbCcpLmFkZEV2ZW50TGlzdGVuZXIoJ2lucHV0JywgZnVuY3Rpb24oKXsKICB0aGlzLnZhbHVlID0gbWFzY2FyYVRlbCh0aGlzLnZhbHVlKTsKfSk7CgpmdW5jdGlvbiB2YWxpZGFyQ2FtcG9zKCl7CiAgbGV0IG9rID0gdHJ1ZTsKICBjb25zdCBlbWFpbCAgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZW1haWwnKS52YWx1ZS50cmltKCk7CiAgY29uc3QgZW1haWwyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2VtYWlsMicpLnZhbHVlLnRyaW0oKTsKICBjb25zdCBub21lICAgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbm9tZScpLnZhbHVlLnRyaW0oKTsKICBjb25zdCBjZWwgICAgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2VsJykudmFsdWUudHJpbSgpOwoKICBjb25zdCBlRW1haWwgPSAhdmFsaWRhckVtYWlsKGVtYWlsKTsKICBjb25zdCBlRW1haWwyID0gZW1haWwgIT09IGVtYWlsMjsKICBjb25zdCBlTm9tZSAgPSBub21lLmxlbmd0aCA8IDM7CiAgY29uc3QgZUNlbCAgID0gY2VsLnJlcGxhY2UoL1xEL2csJycpLmxlbmd0aCA8IDEwOwoKICBzZXRFcnJvcignZi1lbWFpbCcsICBlRW1haWwpOwogIHNldEVycm9yKCdmLWVtYWlsMicsIGVFbWFpbDIpOwogIHNldEVycm9yKCdmLW5vbWUnLCAgIGVOb21lKTsKICBzZXRFcnJvcignZi1jZWwnLCAgICBlQ2VsKTsKCiAgaWYoZUVtYWlsfHxlRW1haWwyfHxlTm9tZXx8ZUNlbCkgb2sgPSBmYWxzZTsKICByZXR1cm4gb2s7Cn0KCi8vIOKUgOKUgCBHRVJBUiBQSVgg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmxldCBkYWRvc0xlYWQgPSBudWxsOwpsZXQgcGl4R2VyYWRvID0gZmFsc2U7Cgphc3luYyBmdW5jdGlvbiBnZXJhclBpeCgpewogIGlmKCF2YWxpZGFyQ2FtcG9zKCkpIHJldHVybjsKCiAgY29uc3QgYnRuICAgID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2J0bi1nZXJhcicpOwogIGNvbnN0IGJ0blR4dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdidG4tZ2VyYXItdHh0Jyk7CgogIC8vIExvYWRpbmcgdmlzdWFsCiAgYnRuLmRpc2FibGVkID0gdHJ1ZTsKICBidG4uY2xhc3NMaXN0LmFkZCgnbG9hZGluZycpOwogIGJ0blR4dC50ZXh0Q29udGVudCA9ICdHZXJhbmRvIGPDs2RpZ28uLi4nOwoKICBkYWRvc0xlYWQgPSB7CiAgICBub21lOiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbm9tZScpLnZhbHVlLnRyaW0oKSwKICAgIGVtYWlsOiAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdlbWFpbCcpLnZhbHVlLnRyaW0oKSwKICAgIGNlbHVsYXI6IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdkZGknKS52YWx1ZSArICcgJyArIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjZWwnKS52YWx1ZS50cmltKCksCiAgICBwcm9kdXRvOiBwcm9kLm5vbWUsCiAgICB2YWxvcjogICBwcm9kLnZhbG9yCiAgfTsKCiAgLy8gRW52aWFyIGxlYWQgcGFyYSBGb3Jtc3ByZWUgKHNpbGVuY2lvc28pCiAgdHJ5IHsKICAgIGF3YWl0IGZldGNoKEZPUk1TUFJFRSwgewogICAgICBtZXRob2Q6ICdQT1NUJywKICAgICAgaGVhZGVyczogeydDb250ZW50LVR5cGUnOidhcHBsaWNhdGlvbi9qc29uJywnQWNjZXB0JzonYXBwbGljYXRpb24vanNvbid9LAogICAgICBib2R5OiBKU09OLnN0cmluZ2lmeSh7IC4uLmRhZG9zTGVhZCwgc3RhdHVzOiAnY8OzZGlnbyBnZXJhZG8nIH0pCiAgICB9KTsKICB9IGNhdGNoKF8pe30KCiAgLy8gU2ltdWxhciBicmV2ZSBkZWxheSAoVVgg4oCUIHBhcmVjZSBxdWUgZ2Vyb3UpCiAgYXdhaXQgbmV3IFByb21pc2UociA9PiBzZXRUaW1lb3V0KHIsIDkwMCkpOwoKICAvLyBNb3N0cmFyIGPDs2RpZ28KICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGl4LWdlbmVyYXRlLWFyZWEnKS5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOwogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwaXgtY29kZS1hcmVhJykuc3R5bGUuZGlzcGxheSAgICAgPSAnYmxvY2snOwogIHBpeEdlcmFkbyA9IHRydWU7CgogIC8vIFByZWVuY2hlciB0ZWxhIGRlIHN1Y2Vzc28KICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2QtZW1haWwnKS50ZXh0Q29udGVudCA9IGRhZG9zTGVhZC5lbWFpbDsKfQoKLy8g4pSA4pSAIENPUElBUiBQSVgg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmZ1bmN0aW9uIGNvcGlhclBpeCgpewogIGNvbnN0IGNvZGUgICA9IHByb2QucGl4OwogIGNvbnN0IGJ0biAgICA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdidG4tY29waWFyJyk7CiAgY29uc3QgYnRuVHh0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2J0bi1jb3BpYXItdHh0Jyk7CgogIGNvbnN0IGRvbmUgPSAoKSA9PiB7CiAgICBidG4uY2xhc3NMaXN0LnJlbW92ZSgncmVhZHknKTsKICAgIGJ0bi5jbGFzc0xpc3QuYWRkKCdjb3BpZWQnKTsKICAgIGJ0blR4dC50ZXh0Q29udGVudCA9ICfinJMgQ8OzZGlnbyBjb3BpYWRvISc7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGl4LWFmdGVyLWNvcHknKS5zdHlsZS5kaXNwbGF5ID0gJ2Jsb2NrJzsKCiAgICAvLyBBcMOzcyBjb3BpYXI6IG1vc3RyYXIgYmFubmVyIGRlIHN1Y2Vzc28gZSBlbnZpYXIgY29uZmlybWHDp8OjbwogICAgc2V0VGltZW91dCgoKSA9PiB7CiAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzdWNjZXNzLWJhbm5lcicpLmNsYXNzTGlzdC5hZGQoJ3Nob3cnKTsKICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N1Y2Nlc3MtYmFubmVyJykuc2Nyb2xsSW50b1ZpZXcoe2JlaGF2aW9yOidzbW9vdGgnLGJsb2NrOiduZWFyZXN0J30pOwogICAgICBlbnZpYXJDb25maXJtYWNhbygpOwogICAgfSwgNjAwKTsKICB9OwoKICBpZihuYXZpZ2F0b3IuY2xpcGJvYXJkICYmIG5hdmlnYXRvci5jbGlwYm9hcmQud3JpdGVUZXh0KXsKICAgIG5hdmlnYXRvci5jbGlwYm9hcmQud3JpdGVUZXh0KGNvZGUpLnRoZW4oZG9uZSkuY2F0Y2goKCkgPT4geyBmYWxsYmFja0NvcHkoY29kZSk7IGRvbmUoKTsgfSk7CiAgfSBlbHNlIHsKICAgIGZhbGxiYWNrQ29weShjb2RlKTsgZG9uZSgpOwogIH0KfQoKZnVuY3Rpb24gZmFsbGJhY2tDb3B5KHRleHQpewogIGNvbnN0IHRhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgndGV4dGFyZWEnKTsKICB0YS52YWx1ZSA9IHRleHQ7IHRhLnN0eWxlLmNzc1RleHQgPSAncG9zaXRpb246Zml4ZWQ7b3BhY2l0eTowJzsKICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKHRhKTsgdGEuc2VsZWN0KCk7CiAgdHJ5IHsgZG9jdW1lbnQuZXhlY0NvbW1hbmQoJ2NvcHknKTsgfSBjYXRjaChfKXt9CiAgZG9jdW1lbnQuYm9keS5yZW1vdmVDaGlsZCh0YSk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGVudmlhckNvbmZpcm1hY2FvKCl7CiAgaWYoIWRhZG9zTGVhZCkgcmV0dXJuOwogIHRyeSB7CiAgICBhd2FpdCBmZXRjaChGT1JNU1BSRUUsIHsKICAgICAgbWV0aG9kOiAnUE9TVCcsCiAgICAgIGhlYWRlcnM6IHsnQ29udGVudC1UeXBlJzonYXBwbGljYXRpb24vanNvbicsJ0FjY2VwdCc6J2FwcGxpY2F0aW9uL2pzb24nfSwKICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkoeyAuLi5kYWRvc0xlYWQsIHN0YXR1czogJ2PDs2RpZ28gY29waWFkbyDigJQgYWd1YXJkYW5kbyBwYWdhbWVudG8nIH0pCiAgICB9KTsKICB9IGNhdGNoKF8pe30KfQoKLy8gRm9jdXMgc2Nyb2xsIHN1YXZlIG5vIG1vYmlsZQpkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdpbnB1dCwgc2VsZWN0JykuZm9yRWFjaChlbCA9PiB7CiAgZWwuYWRkRXZlbnRMaXN0ZW5lcignZm9jdXMnLCBmdW5jdGlvbigpewogICAgc2V0VGltZW91dCgoKSA9PiB0aGlzLnNjcm9sbEludG9WaWV3KHtiZWhhdmlvcjonc21vb3RoJyxibG9jazonY2VudGVyJ30pLCAzNTApOwogIH0pOwp9KTsKPC9zY3JpcHQ+Cgo8L2JvZHk+CjwvaHRtbD4=';
+
+function decodeCheckoutTemplate(){
+  const binary = atob(CHECKOUT_TEMPLATE_B64);
+  const bytes = Uint8Array.from(binary, ch => ch.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+function buildCheckoutHtml(produto){
+  const html = decodeCheckoutTemplate();
+  // SVG mockup de produto digital — Protocolo de Retorno
+  const PRODUCT_SVG = `data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 260'><defs><linearGradient id='cover' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23991B1B'/><stop offset='50%' stop-color='%23DC2626'/><stop offset='100%' stop-color='%23B91C1C'/></linearGradient><linearGradient id='shine' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23ffffff' stop-opacity='0.18'/><stop offset='100%' stop-color='%23ffffff' stop-opacity='0'/></linearGradient><linearGradient id='gold' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='%23F59E0B'/><stop offset='50%' stop-color='%23FCD34D'/><stop offset='100%' stop-color='%23F59E0B'/></linearGradient><filter id='shadow'><feDropShadow dx='4' dy='6' stdDeviation='6' flood-color='%23991B1B' flood-opacity='0.35'/></filter></defs><rect x='10' y='8' width='156' height='244' rx='8' fill='%23B91C1C' opacity='0.25' filter='url(%23shadow)'/><rect x='14' y='4' width='156' height='244' rx='8' fill='%23991B1B' opacity='0.4'/><rect x='18' y='0' width='156' height='244' rx='8' fill='url(%23cover)'/><rect x='18' y='0' width='156' height='244' rx='8' fill='url(%23shine)'/><rect x='18' y='0' width='5' height='244' rx='3' fill='%23ffffff' opacity='0.07'/><rect x='26' y='12' width='140' height='1' fill='url(%23gold)' opacity='0.6'/><rect x='26' y='232' width='140' height='1' fill='url(%23gold)' opacity='0.6'/><text x='96' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='9' font-weight='700' letter-spacing='3' fill='%23FCD34D' opacity='0.9'>MÉTODO EXCLUSIVO</text><path d='M96 55 C 78 40, 58 40, 58 56 C 58 72, 78 72, 96 90 C 114 72, 134 72, 134 56 C 134 40, 114 40, 96 55 Z' fill='%23ffffff' opacity='0.15'/><path d='M96 52 C 80 38, 62 38, 62 54 C 62 70, 80 70, 96 88 C 112 70, 130 70, 130 54 C 130 38, 112 38, 96 52 Z' fill='%23ffffff' opacity='0.22'/><path d='M96 50 C 81 37, 65 37, 65 52 C 65 67, 81 67, 96 84 C 111 67, 127 67, 127 52 C 127 37, 111 37, 96 50 Z' fill='%23FCA5A5' opacity='0.5'/><text x='96' y='108' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='900' fill='%23ffffff' letter-spacing='-0.5'>Protocolo</text><text x='96' y='128' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='900' fill='%23ffffff' letter-spacing='-0.5'>de Retorno</text><rect x='46' y='136' width='100' height='2' rx='1' fill='url(%23gold)' opacity='0.8'/><text x='96' y='154' text-anchor='middle' font-family='Arial,sans-serif' font-size='7.5' font-weight='600' fill='%23FECACA' letter-spacing='0.5'>7 dias para ele voltar</text><text x='96' y='166' text-anchor='middle' font-family='Arial,sans-serif' font-size='7.5' font-weight='600' fill='%23FECACA' letter-spacing='0.5'>a te procurar</text><rect x='54' y='178' width='84' height='28' rx='14' fill='%23ffffff' opacity='0.12'/><text x='96' y='196' text-anchor='middle' font-family='Arial,sans-serif' font-size='8' font-weight='800' fill='%23FCD34D' letter-spacing='1'>SEM SUPLICAR</text><text x='96' y='222' text-anchor='middle' font-family='Georgia,serif' font-size='8' font-weight='400' fill='%23FCA5A5' font-style='italic'>Josiane Monteiro</text></svg>`)}`;
+  // Substitui o src da imagem quebrada pelo SVG embutido
+  let patched = html.replace("src=\"img/produto.jpg\"", `src="${PRODUCT_SVG}"`);
+  const inject = `<script>window.__CHECKOUT_PRODUCT__=${JSON.stringify(produto)};<\/script>`;
+  return patched.replace('<body>', '<body>' + inject);
+}
+
+function openCheckoutPage(produto='protocolo'){
+  const overlay = document.getElementById('checkoutOverlay');
+  const frame = document.getElementById('checkoutFrame');
+  frame.srcdoc = buildCheckoutHtml(produto);
+  overlay.classList.add('show');
+  overlay.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('checkout-open');
+}
+
+function closeCheckoutPage(){
+  const overlay = document.getElementById('checkoutOverlay');
+  const frame = document.getElementById('checkoutFrame');
+  overlay.classList.remove('show');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('checkout-open');
+  frame.srcdoc = '';
+}
+
+document.getElementById('checkoutOverlay').addEventListener('click', e => {
+  if(e.target.id === 'checkoutOverlay') closeCheckoutPage();
+});
+
+
+document.querySelectorAll('.modal-form input, .modal-form select').forEach(el => {
+  el.addEventListener('focus', function() {
+    setTimeout(() => {
+      this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 350);
+  });
+});
+
+
+// ─── VAGAS COUNTDOWN ───
+(function(){
+  const TOTAL_VAGAS = 20;
+  const STORAGE_KEY = 'pr_vagas_state';
+
+  function getState(){
+    try {
+      const s = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      if(s && s.vagas > 0 && s.endTime > Date.now()) return s;
+    } catch(_){}
+    // Initialize: 17 vagas, timer ~2h47m
+    const vagas = 17;
+    const endTime = Date.now() + (2*3600 + 47*60 + 33) * 1000;
+    const state = { vagas, endTime };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    return state;
+  }
+
+  let state = getState();
+
+  // Decrease vagas every 4-8 minutes randomly
+  function scheduleDecrease(){
+    const delay = (4 + Math.random()*4) * 60 * 1000;
+    setTimeout(()=>{
+      if(state.vagas > 1){
+        state.vagas--;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        updateVagasUI();
+      }
+      scheduleDecrease();
+    }, delay);
+  }
+  scheduleDecrease();
+
+  function updateVagasUI(){
+    const num = state.vagas;
+    const el1 = document.getElementById('vagasNum');
+    const el2 = document.getElementById('vagasNumBar');
+    const bar = document.getElementById('vagasBar');
+    if(el1) el1.textContent = num;
+    if(el2) el2.textContent = num;
+    if(bar) bar.style.width = ((num / TOTAL_VAGAS) * 100) + '%';
+  }
+
+  function updateTimer(){
+    const remaining = Math.max(0, state.endTime - Date.now());
+    const h = Math.floor(remaining / 3600000);
+    const m = Math.floor((remaining % 3600000) / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    const pad = n => String(n).padStart(2,'0');
+    const elH = document.getElementById('timerH');
+    const elM = document.getElementById('timerM');
+    const elS = document.getElementById('timerS');
+    if(elH) elH.textContent = pad(h);
+    if(elM) elM.textContent = pad(m);
+    if(elS) elS.textContent = pad(s);
+    if(remaining <= 0){
+      // Reset timer for another cycle
+      state.endTime = Date.now() + (2*3600 + 30*60) * 1000;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+  }
+
+  updateVagasUI();
+  updateTimer();
+  setInterval(updateTimer, 1000);
+})();
+
+// ─── DEPOIMENTOS CAROUSEL ───
+(function(){
+  const carousel = document.getElementById('depoCarousel');
+  const dotsWrap = document.getElementById('depoDots');
+  const prevBtn = document.getElementById('depoPrev');
+  const nextBtn = document.getElementById('depoNext');
+  if(!carousel || !dotsWrap) return;
+
+  const phones = carousel.querySelectorAll('.depo-phone');
+  const total = phones.length;
+  let current = 0;
+
+  // Create dots
+  for(let i = 0; i < total; i++){
+    const dot = document.createElement('div');
+    dot.className = 'depo-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  }
+  const dots = dotsWrap.querySelectorAll('.depo-dot');
+
+  function goTo(idx){
+    current = Math.max(0, Math.min(idx, total - 1));
+    phones[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  // Update dots on scroll
+  let scrollTimer;
+  carousel.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const carouselRect = carousel.getBoundingClientRect();
+      const center = carouselRect.left + carouselRect.width / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      phones.forEach((p, i) => {
+        const r = p.getBoundingClientRect();
+        const pCenter = r.left + r.width / 2;
+        const dist = Math.abs(pCenter - center);
+        if(dist < minDist){ minDist = dist; closest = i; }
+      });
+      current = closest;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }, 100);
+  });
+
+  // Auto-scroll
+  let autoInterval = setInterval(() => {
+    goTo(current >= total - 1 ? 0 : current + 1);
+  }, 5000);
+
+  carousel.addEventListener('touchstart', () => clearInterval(autoInterval));
+  carousel.addEventListener('mouseenter', () => clearInterval(autoInterval));
+})();
+
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
